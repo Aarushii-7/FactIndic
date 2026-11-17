@@ -95,6 +95,7 @@ def run_local_baseline(
     output_csv: Path,
     model_id: str = "Qwen/Qwen2.5-1.5B-Instruct",
     limit: int = 5,
+    balanced: int = None,
 ):
     pipe = load_local_pipeline(model_id)
     df = pd.read_csv(input_csv)
@@ -111,9 +112,18 @@ def run_local_baseline(
         completed_ids = set()
         results = []
 
-    remaining = df[~df["sample_id"].isin(completed_ids)]
-    if limit is not None:
-        remaining = remaining.head(limit)
+    if balanced is not None and balanced > 0:
+        dfs = []
+        for lang in ["hindi", "english", "hinglish"]:
+            lang_df = df[df["language"] == lang]
+            lang_rem = lang_df[~lang_df["sample_id"].isin(completed_ids)]
+            dfs.append(lang_rem.head(balanced))
+        remaining = pd.concat(dfs, ignore_index=True)
+        print(f"Selected balanced slice of {len(remaining)} sample(s) ({balanced} per language)...")
+    else:
+        remaining = df[~df["sample_id"].isin(completed_ids)]
+        if limit is not None and limit > 0:
+            remaining = remaining.head(limit)
 
     total = len(remaining)
     if total == 0:
@@ -187,13 +197,18 @@ def main():
     parser.add_argument(
         "--limit",
         type=int,
-        default=5,
-        help="Number of records to process (default: 5, use --limit 0 or omit for all)",
+        default=None,
+        help="Number of records to process (e.g. --limit 10)",
+    )
+    parser.add_argument(
+        "--balanced",
+        type=int,
+        default=None,
+        help="Process N records per language (e.g. --balanced 5 gives 5 Hindi, 5 English, 5 Hinglish)",
     )
 
     args = parser.parse_args()
-    limit = None if args.limit <= 0 else args.limit
-    run_local_baseline(args.input, args.output, args.model, limit)
+    run_local_baseline(args.input, args.output, args.model, args.limit, args.balanced)
 
 if __name__ == "__main__":
     main()
