@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+.venv*/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large intermediate full-split CSVs (>100MB each)
+# These are reproducible anytime with dataset_inspection.py
+data/ilsum/*_filtered.csv
+
+# macOS system files
+.DS_Store
+
+# IDE and local notebooks
+.ipynb_checkpoints/
+.vscode/
+.idea/
