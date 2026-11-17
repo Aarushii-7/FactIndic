@@ -16,6 +16,11 @@ data/ilsum/*_filtered.csv
 # macOS system files
 .DS_Store
 
+# Environment variables & secrets
+.env
+*.env
+.env.*
+
 # IDE and local notebooks
 .ipynb_checkpoints/
 .vscode/
