@@ -1,0 +1,4 @@
+﻿Condition,ROUGE-1 Precision,ROUGE-1 Recall,ROUGE-1 F1,ROUGE-2 F1,ROUGE-L F1,Macro Support (%),Macro Contra (%),Micro Support (Claims),Micro Contra (Claims),Avg Summary Words,Compression Ratio (%),Inference Time (s)
+Condition A (Standard),0.3107,0.2844,0.2535,0.0986,0.1946,52.5,14.58,30/60 (50.0%),8/60 (13.33%),52.4,27.47,21.88
+Condition B (Factuality-Aware),0.2292,0.2468,0.1951,0.0583,0.1477,66.11,12.5,39/67 (58.21%),8/67 (11.94%),59.1,27.8,40.29
+Condition C (Revision Loop),0.2104,0.2732,0.2126,0.0687,0.1525,67.99,9.1,38/64 (59.38%),6/64 (9.38%),56.0,27.79,49.04
