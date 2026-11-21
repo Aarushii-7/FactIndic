@@ -52,13 +52,16 @@ def load_local_pipeline(model_id: str):
     print(f"==================================================")
 
     print("Downloading/loading tokenizer and weights (cached automatically)...")
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_id, local_files_only=True)
+    except Exception:
+        tokenizer = AutoTokenizer.from_pretrained(model_id)
 
     dtype = torch.float16 if device_str in ["mps", "cuda"] else torch.float32
-    model = AutoModelForCausalLM.from_pretrained(
-        model_id,
-        torch_dtype=dtype,
-    )
+    try:
+        model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype, local_files_only=True)
+    except Exception:
+        model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
     model.to(torch.device(device_str))
     model.eval()
 
@@ -116,10 +119,12 @@ def run_local_baseline(
         dfs = []
         for lang in ["hindi", "english", "hinglish"]:
             lang_df = df[df["language"] == lang]
+            lang_done = sum(1 for cid in completed_ids if cid in set(lang_df["sample_id"]))
+            needed = max(0, balanced - lang_done)
             lang_rem = lang_df[~lang_df["sample_id"].isin(completed_ids)]
-            dfs.append(lang_rem.head(balanced))
+            dfs.append(lang_rem.head(needed))
         remaining = pd.concat(dfs, ignore_index=True)
-        print(f"Selected balanced slice of {len(remaining)} sample(s) ({balanced} per language)...")
+        print(f"Selected balanced batch: {len(remaining)} sample(s) to reach target of {balanced} per language ({balanced*3} total)...")
     else:
         remaining = df[~df["sample_id"].isin(completed_ids)]
         if limit is not None and limit > 0:

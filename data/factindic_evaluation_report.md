@@ -1,5 +1,5 @@
 # FactIndic: Comprehensive Experimental Evaluation Report (Phase 6)
-**Date Generated:** 2026-11-21 17:34:44  
+**Date Generated:** 2026-11-21 18:07:11  
 **Study Setup:** 3 Experimental Conditions (A: Standard, B: Factuality-Aware, C: NLI-Guided Revision Loop)  
 **Sample Corpus:** 18 Evaluated Documents (8 Hindi News, 5 English News, 5 Hinglish Dialogues)
 
@@ -12,14 +12,14 @@
 
 | Metric | Condition A (Standard) | Condition B (Factuality-Aware) | Condition C (Revision Loop) | Net Delta (C vs. A) |
 | :--- | :---: | :---: | :---: | :---: |
-| **ROUGE-1 Precision** | 0.3107 | 0.2292 | **0.2104** | -0.1003 |
-| **ROUGE-1 Recall** | 0.2844 | 0.2468 | **0.2732** | -0.0112 |
-| **ROUGE-1 F1** | 0.2535 | 0.1951 | **0.2126** | -0.0409 |
-| **ROUGE-2 F1** | 0.0986 | 0.0583 | **0.0687** | -0.0299 |
-| **ROUGE-L F1** | 0.1946 | 0.1477 | **0.1525** | -0.0421 |
-| **Average Summary Length (words)** | 52.4 words | 59.1 words | 56.0 words | - |
+| **Precision** | 0.3107 | 0.2292 | **0.2104** | -0.1003 |
+| **Recall** | 0.2844 | 0.2468 | **0.2732** | -0.0112 |
+| **F1-Score** | 0.2535 | 0.1951 | **0.2126** | -0.0409 |
+| **Average Summary Length** | 52.4 words | 59.1 words | 56.0 words | - |
 | **Compression Ratio (%)** | 27.47% | 27.8% | 27.79% | - |
 | **Inference Time (s)** | 21.88s | 40.29s | 49.04s | - |
+| **Factual Support (%)** | **52.5%** | **66.11%** | **67.99%** | **+15.5%** |
+| **Contradiction (%)** | **14.58%** | **12.5%** | **9.1%** | **-5.5%** |
 
 ---
 
@@ -33,8 +33,8 @@
 | :--- | :---: | :---: | :---: | :---: |
 | **Macro Factual Support Rate (%)** | **52.5%** | **66.11%** | **67.99%** | **+15.5%** |
 | **Macro Contradiction Rate (%)** | **14.58%** | **12.5%** | **9.1%** | **-5.5%** |
-| **Micro Support Rate (Claims)** | 30/60 (50.0%) | 39/67 (58.21%) | **38/64 (59.38%)** | **+9.4%** |
-| **Micro Contradiction Rate (Claims)** | 8/60 (13.33%) | 8/67 (11.94%) | **6/64 (9.38%)** | **-3.9%** |
+| **Micro Support Rate (Claims)** | f"30/60 (50.0%)" | f"39/67 (58.21%)" | **f"38/64 (59.38%)"** | **+9.4%** |
+| **Micro Contradiction Rate (Claims)** | f"8/60 (13.33%)" | f"8/67 (11.94%)" | **f"6/64 (9.38%)"** | **-3.9%** |
 | **Total Claims Audited (N)** | N = 60 claims | N = 67 claims | N = 64 claims | - |
 
 *Note on 127 Baseline Claims:* The 127 baseline claims in `claims_verification_detailed.csv` represent the pooled claims across Condition A (N = 60) and Condition B (N = 67). Across all 127 baseline claims:
@@ -46,11 +46,11 @@
 
 ## 2. Language Slice Analysis (Section 14)
 
-| Language | Samples | Cond A Support | Cond B Support | Cond C Support | Cond A Contra | Cond B Contra | Cond C Contra | Compression (C) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ENGLISH** | 5 | 74.3% | 72.3% | **72.3%** | 5.0% | 3.3% | **3.3%** | 22.3% |
-| **HINDI** | 8 | 58.3% | 53.5% | **57.8%** | 10.9% | 26.0% | **18.4%** | 15.5% |
-| **HINGLISH** | 5 | 21.3% | 80.0% | **80.0%** | 30.0% | 0.0% | **0.0%** | 53.0% |
+| Language | Samples | Precision | Recall | F1-Score | Length | Compression (%) | Inference (s) | Support (%) | Contradiction (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ENGLISH** | 5 | 0.2074 | 0.4033 | 0.2723 | 74.4 words | 22.29% | 13.95s | 72.33% | 3.33% |
+| **HINDI** | 8 | 0.1583 | 0.1059 | 0.1062 | 59.1 words | 15.5% | 96.66s | 57.78% | 18.4% |
+| **HINGLISH** | 5 | 0.2968 | 0.4109 | 0.3232 | 32.6 words | 52.97% | 7.94s | 80.0% | 0.0% |
 
 ---
 

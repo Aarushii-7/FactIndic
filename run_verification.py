@@ -1,3 +1,5 @@
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
 """
 FactIndic - Phase 4: Full Verification Pipeline Runner
 Loads generated summaries from Condition A and Condition B,

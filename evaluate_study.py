@@ -188,48 +188,36 @@ def run_evaluation():
     summary_by_cond = pd.DataFrame([
         {
             "Condition": "Condition A (Standard)",
-            "ROUGE-1 Precision": round(metrics_df["precision_A"].mean(), 4),
-            "ROUGE-1 Recall": round(metrics_df["recall_A"].mean(), 4),
-            "ROUGE-1 F1": round(metrics_df["f1_score_A"].mean(), 4),
-            "ROUGE-2 F1": round(metrics_df["rouge2_A"].mean(), 4),
-            "ROUGE-L F1": round(metrics_df["rougeL_A"].mean(), 4),
-            "Macro Support (%)": round(metrics_df["support_rate_A"].mean(), 2),
-            "Macro Contra (%)": round(metrics_df["contradiction_rate_A"].mean(), 2),
-            "Micro Support (Claims)": f"{micro_stats['A']['ent']}/{micro_stats['A']['total']} ({micro_stats['A']['support_rate']}%)",
-            "Micro Contra (Claims)": f"{micro_stats['A']['con']}/{micro_stats['A']['total']} ({micro_stats['A']['contra_rate']}%)",
-            "Avg Summary Words": round(metrics_df["summary_words_A"].mean(), 1),
+            "Precision": round(metrics_df["precision_A"].mean(), 4),
+            "Recall": round(metrics_df["recall_A"].mean(), 4),
+            "F1-Score": round(metrics_df["f1_score_A"].mean(), 4),
+            "Average Summary Length": round(metrics_df["summary_words_A"].mean(), 1),
             "Compression Ratio (%)": round(metrics_df["compression_words_A"].mean(), 2),
             "Inference Time (s)": round(metrics_df["inference_time_A"].mean(), 2),
+            "Factual Support (%)": round(metrics_df["support_rate_A"].mean(), 2),
+            "Contradiction (%)": round(metrics_df["contradiction_rate_A"].mean(), 2),
         },
         {
             "Condition": "Condition B (Factuality-Aware)",
-            "ROUGE-1 Precision": round(metrics_df["precision_B"].mean(), 4),
-            "ROUGE-1 Recall": round(metrics_df["recall_B"].mean(), 4),
-            "ROUGE-1 F1": round(metrics_df["f1_score_B"].mean(), 4),
-            "ROUGE-2 F1": round(metrics_df["rouge2_B"].mean(), 4),
-            "ROUGE-L F1": round(metrics_df["rougeL_B"].mean(), 4),
-            "Macro Support (%)": round(metrics_df["support_rate_B"].mean(), 2),
-            "Macro Contra (%)": round(metrics_df["contradiction_rate_B"].mean(), 2),
-            "Micro Support (Claims)": f"{micro_stats['B']['ent']}/{micro_stats['B']['total']} ({micro_stats['B']['support_rate']}%)",
-            "Micro Contra (Claims)": f"{micro_stats['B']['con']}/{micro_stats['B']['total']} ({micro_stats['B']['contra_rate']}%)",
-            "Avg Summary Words": round(metrics_df["summary_words_B"].mean(), 1),
+            "Precision": round(metrics_df["precision_B"].mean(), 4),
+            "Recall": round(metrics_df["recall_B"].mean(), 4),
+            "F1-Score": round(metrics_df["f1_score_B"].mean(), 4),
+            "Average Summary Length": round(metrics_df["summary_words_B"].mean(), 1),
             "Compression Ratio (%)": round(metrics_df["compression_words_B"].mean(), 2),
             "Inference Time (s)": round(metrics_df["inference_time_B"].mean(), 2),
+            "Factual Support (%)": round(metrics_df["support_rate_B"].mean(), 2),
+            "Contradiction (%)": round(metrics_df["contradiction_rate_B"].mean(), 2),
         },
         {
             "Condition": "Condition C (Revision Loop)",
-            "ROUGE-1 Precision": round(metrics_df["precision_C"].mean(), 4),
-            "ROUGE-1 Recall": round(metrics_df["recall_C"].mean(), 4),
-            "ROUGE-1 F1": round(metrics_df["f1_score_C"].mean(), 4),
-            "ROUGE-2 F1": round(metrics_df["rouge2_C"].mean(), 4),
-            "ROUGE-L F1": round(metrics_df["rougeL_C"].mean(), 4),
-            "Macro Support (%)": round(metrics_df["support_rate_C"].mean(), 2),
-            "Macro Contra (%)": round(metrics_df["contradiction_rate_C"].mean(), 2),
-            "Micro Support (Claims)": f"{micro_stats['C']['ent']}/{micro_stats['C']['total']} ({micro_stats['C']['support_rate']}%)",
-            "Micro Contra (Claims)": f"{micro_stats['C']['con']}/{micro_stats['C']['total']} ({micro_stats['C']['contra_rate']}%)",
-            "Avg Summary Words": round(metrics_df["summary_words_C"].mean(), 1),
+            "Precision": round(metrics_df["precision_C"].mean(), 4),
+            "Recall": round(metrics_df["recall_C"].mean(), 4),
+            "F1-Score": round(metrics_df["f1_score_C"].mean(), 4),
+            "Average Summary Length": round(metrics_df["summary_words_C"].mean(), 1),
             "Compression Ratio (%)": round(metrics_df["compression_words_C"].mean(), 2),
             "Inference Time (s)": round(metrics_df["inference_time_C"].mean(), 2),
+            "Factual Support (%)": round(metrics_df["support_rate_C"].mean(), 2),
+            "Contradiction (%)": round(metrics_df["contradiction_rate_C"].mean(), 2),
         },
     ])
     summary_by_cond.to_csv(DATA_DIR / "evaluation_summary_by_condition.csv", index=False, encoding="utf-8-sig")
@@ -241,18 +229,14 @@ def run_evaluation():
             "Language": lang.upper(),
             "Samples": len(grp),
             # Required assignment metrics
-            "Precision (C)": round(grp["precision_C"].mean(), 3),
-            "Recall (C)": round(grp["recall_C"].mean(), 3),
-            "F1-Score (C)": round(grp["f1_score_C"].mean(), 3),
-            "Support_A (%)": round(grp["support_rate_A"].mean(), 1),
-            "Support_B (%)": round(grp["support_rate_B"].mean(), 1),
-            "Support_C (%)": round(grp["support_rate_C"].mean(), 1),
-            "Contra_A (%)": round(grp["contradiction_rate_A"].mean(), 1),
-            "Contra_B (%)": round(grp["contradiction_rate_B"].mean(), 1),
-            "Contra_C (%)": round(grp["contradiction_rate_C"].mean(), 1),
-            "Avg Summary Words": round(grp["summary_words_C"].mean(), 1),
-            "Compression (%)": round(grp["compression_words_C"].mean(), 1),
+            "Precision": round(grp["precision_C"].mean(), 4),
+            "Recall": round(grp["recall_C"].mean(), 4),
+            "F1-Score": round(grp["f1_score_C"].mean(), 4),
+            "Average Summary Length": round(grp["summary_words_C"].mean(), 1),
+            "Compression Ratio (%)": round(grp["compression_words_C"].mean(), 2),
             "Inference Time (s)": round(grp["inference_time_C"].mean(), 2),
+            "Support Rate (%)": round(grp["support_rate_C"].mean(), 2),
+            "Contradiction Rate (%)": round(grp["contradiction_rate_C"].mean(), 2),
         })
     lang_df = pd.DataFrame(lang_rows)
     lang_df.to_csv(DATA_DIR / "evaluation_language_breakdown.csv", index=False, encoding="utf-8-sig")
@@ -279,14 +263,14 @@ def run_evaluation():
 
 | Metric | Condition A (Standard) | Condition B (Factuality-Aware) | Condition C (Revision Loop) | Net Delta (C vs. A) |
 | :--- | :---: | :---: | :---: | :---: |
-| **ROUGE-1 Precision** | {summary_by_cond.loc[0, 'ROUGE-1 Precision']} | {summary_by_cond.loc[1, 'ROUGE-1 Precision']} | **{summary_by_cond.loc[2, 'ROUGE-1 Precision']}** | {round(summary_by_cond.loc[2, 'ROUGE-1 Precision'] - summary_by_cond.loc[0, 'ROUGE-1 Precision'], 4):+} |
-| **ROUGE-1 Recall** | {summary_by_cond.loc[0, 'ROUGE-1 Recall']} | {summary_by_cond.loc[1, 'ROUGE-1 Recall']} | **{summary_by_cond.loc[2, 'ROUGE-1 Recall']}** | {round(summary_by_cond.loc[2, 'ROUGE-1 Recall'] - summary_by_cond.loc[0, 'ROUGE-1 Recall'], 4):+} |
-| **ROUGE-1 F1** | {summary_by_cond.loc[0, 'ROUGE-1 F1']} | {summary_by_cond.loc[1, 'ROUGE-1 F1']} | **{summary_by_cond.loc[2, 'ROUGE-1 F1']}** | {round(summary_by_cond.loc[2, 'ROUGE-1 F1'] - summary_by_cond.loc[0, 'ROUGE-1 F1'], 4):+} |
-| **ROUGE-2 F1** | {summary_by_cond.loc[0, 'ROUGE-2 F1']} | {summary_by_cond.loc[1, 'ROUGE-2 F1']} | **{summary_by_cond.loc[2, 'ROUGE-2 F1']}** | {round(summary_by_cond.loc[2, 'ROUGE-2 F1'] - summary_by_cond.loc[0, 'ROUGE-2 F1'], 4):+} |
-| **ROUGE-L F1** | {summary_by_cond.loc[0, 'ROUGE-L F1']} | {summary_by_cond.loc[1, 'ROUGE-L F1']} | **{summary_by_cond.loc[2, 'ROUGE-L F1']}** | {round(summary_by_cond.loc[2, 'ROUGE-L F1'] - summary_by_cond.loc[0, 'ROUGE-L F1'], 4):+} |
-| **Average Summary Length (words)** | {summary_by_cond.loc[0, 'Avg Summary Words']} words | {summary_by_cond.loc[1, 'Avg Summary Words']} words | {summary_by_cond.loc[2, 'Avg Summary Words']} words | - |
+| **Precision** | {summary_by_cond.loc[0, 'Precision']} | {summary_by_cond.loc[1, 'Precision']} | **{summary_by_cond.loc[2, 'Precision']}** | {round(summary_by_cond.loc[2, 'Precision'] - summary_by_cond.loc[0, 'Precision'], 4):+} |
+| **Recall** | {summary_by_cond.loc[0, 'Recall']} | {summary_by_cond.loc[1, 'Recall']} | **{summary_by_cond.loc[2, 'Recall']}** | {round(summary_by_cond.loc[2, 'Recall'] - summary_by_cond.loc[0, 'Recall'], 4):+} |
+| **F1-Score** | {summary_by_cond.loc[0, 'F1-Score']} | {summary_by_cond.loc[1, 'F1-Score']} | **{summary_by_cond.loc[2, 'F1-Score']}** | {round(summary_by_cond.loc[2, 'F1-Score'] - summary_by_cond.loc[0, 'F1-Score'], 4):+} |
+| **Average Summary Length** | {summary_by_cond.loc[0, 'Average Summary Length']} words | {summary_by_cond.loc[1, 'Average Summary Length']} words | {summary_by_cond.loc[2, 'Average Summary Length']} words | - |
 | **Compression Ratio (%)** | {summary_by_cond.loc[0, 'Compression Ratio (%)']}% | {summary_by_cond.loc[1, 'Compression Ratio (%)']}% | {summary_by_cond.loc[2, 'Compression Ratio (%)']}% | - |
 | **Inference Time (s)** | {summary_by_cond.loc[0, 'Inference Time (s)']}s | {summary_by_cond.loc[1, 'Inference Time (s)']}s | {summary_by_cond.loc[2, 'Inference Time (s)']}s | - |
+| **Factual Support (%)** | **{summary_by_cond.loc[0, 'Factual Support (%)']}%** | **{summary_by_cond.loc[1, 'Factual Support (%)']}%** | **{summary_by_cond.loc[2, 'Factual Support (%)']}%** | **+{round(summary_by_cond.loc[2, 'Factual Support (%)'] - summary_by_cond.loc[0, 'Factual Support (%)'], 1)}%** |
+| **Contradiction (%)** | **{summary_by_cond.loc[0, 'Contradiction (%)']}%** | **{summary_by_cond.loc[1, 'Contradiction (%)']}%** | **{summary_by_cond.loc[2, 'Contradiction (%)']}%** | **-{round(summary_by_cond.loc[0, 'Contradiction (%)'] - summary_by_cond.loc[2, 'Contradiction (%)'], 1)}%** |
 
 ---
 
@@ -298,10 +282,10 @@ def run_evaluation():
 
 | Metric / Evaluation Mode | Condition A (Standard) | Condition B (Factuality-Aware) | Condition C (Revision Loop) | Net Delta (C vs. A) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Macro Factual Support Rate (%)** | **{summary_by_cond.loc[0, 'Macro Support (%)']}%** | **{summary_by_cond.loc[1, 'Macro Support (%)']}%** | **{summary_by_cond.loc[2, 'Macro Support (%)']}%** | **+{round(summary_by_cond.loc[2, 'Macro Support (%)'] - summary_by_cond.loc[0, 'Macro Support (%)'], 1)}%** |
-| **Macro Contradiction Rate (%)** | **{summary_by_cond.loc[0, 'Macro Contra (%)']}%** | **{summary_by_cond.loc[1, 'Macro Contra (%)']}%** | **{summary_by_cond.loc[2, 'Macro Contra (%)']}%** | **-{round(summary_by_cond.loc[0, 'Macro Contra (%)'] - summary_by_cond.loc[2, 'Macro Contra (%)'], 1)}%** |
-| **Micro Support Rate (Claims)** | {summary_by_cond.loc[0, 'Micro Support (Claims)']} | {summary_by_cond.loc[1, 'Micro Support (Claims)']} | **{summary_by_cond.loc[2, 'Micro Support (Claims)']}** | **+{round(micro_stats['C']['support_rate'] - micro_stats['A']['support_rate'], 1)}%** |
-| **Micro Contradiction Rate (Claims)** | {summary_by_cond.loc[0, 'Micro Contra (Claims)']} | {summary_by_cond.loc[1, 'Micro Contra (Claims)']} | **{summary_by_cond.loc[2, 'Micro Contra (Claims)']}** | **-{round(micro_stats['A']['contra_rate'] - micro_stats['C']['contra_rate'], 1)}%** |
+| **Macro Factual Support Rate (%)** | **{summary_by_cond.loc[0, 'Factual Support (%)']}%** | **{summary_by_cond.loc[1, 'Factual Support (%)']}%** | **{summary_by_cond.loc[2, 'Factual Support (%)']}%** | **+{round(summary_by_cond.loc[2, 'Factual Support (%)'] - summary_by_cond.loc[0, 'Factual Support (%)'], 1)}%** |
+| **Macro Contradiction Rate (%)** | **{summary_by_cond.loc[0, 'Contradiction (%)']}%** | **{summary_by_cond.loc[1, 'Contradiction (%)']}%** | **{summary_by_cond.loc[2, 'Contradiction (%)']}%** | **-{round(summary_by_cond.loc[0, 'Contradiction (%)'] - summary_by_cond.loc[2, 'Contradiction (%)'], 1)}%** |
+| **Micro Support Rate (Claims)** | f"{micro_stats['A']['ent']}/{micro_stats['A']['total']} ({micro_stats['A']['support_rate']}%)" | f"{micro_stats['B']['ent']}/{micro_stats['B']['total']} ({micro_stats['B']['support_rate']}%)" | **f"{micro_stats['C']['ent']}/{micro_stats['C']['total']} ({micro_stats['C']['support_rate']}%)"** | **+{round(micro_stats['C']['support_rate'] - micro_stats['A']['support_rate'], 1)}%** |
+| **Micro Contradiction Rate (Claims)** | f"{micro_stats['A']['con']}/{micro_stats['A']['total']} ({micro_stats['A']['contra_rate']}%)" | f"{micro_stats['B']['con']}/{micro_stats['B']['total']} ({micro_stats['B']['contra_rate']}%)" | **f"{micro_stats['C']['con']}/{micro_stats['C']['total']} ({micro_stats['C']['contra_rate']}%)"** | **-{round(micro_stats['A']['contra_rate'] - micro_stats['C']['contra_rate'], 1)}%** |
 | **Total Claims Audited (N)** | N = {micro_stats['A']['total']} claims | N = {micro_stats['B']['total']} claims | N = {micro_stats['C']['total']} claims | - |
 
 *Note on 127 Baseline Claims:* The 127 baseline claims in `claims_verification_detailed.csv` represent the pooled claims across Condition A (N = 60) and Condition B (N = 67). Across all 127 baseline claims:
@@ -313,14 +297,14 @@ def run_evaluation():
 
 ## 2. Language Slice Analysis (Section 14)
 
-| Language | Samples | Cond A Support | Cond B Support | Cond C Support | Cond A Contra | Cond B Contra | Cond C Contra | Compression (C) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Language | Samples | Precision | Recall | F1-Score | Length | Compression (%) | Inference (s) | Support (%) | Contradiction (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 """
     for _, lr in lang_df.iterrows():
         report_md += (
-            f"| **{lr['Language']}** | {lr['Samples']} | {lr['Support_A (%)']}% | "
-            f"{lr['Support_B (%)']}% | **{lr['Support_C (%)']}%** | {lr['Contra_A (%)']}% | "
-            f"{lr['Contra_B (%)']}% | **{lr['Contra_C (%)']}%** | {lr['Compression (%)']}% |\n"
+            f"| **{lr['Language']}** | {lr['Samples']} | {lr['Precision']} | {lr['Recall']} | {lr['F1-Score']} | "
+            f"{lr['Average Summary Length']} words | {lr['Compression Ratio (%)']}% | {lr['Inference Time (s)']}s | "
+            f"{lr['Support Rate (%)']}% | {lr['Contradiction Rate (%)']}% |\n"
         )
 
     report_md += f"""
@@ -339,7 +323,7 @@ Strict Automated Acceptance Policy: Support Rate >= 90%, Contradiction Rate <= 5
 ---
 
 ## 4. Key Scientific Findings & Discussion
-1. **Targeted Revision Enhances Faithfulness**: Condition C achieved the highest factual support rate (**{summary_by_cond.loc[2, 'Macro Support (%)']}%** Macro / **{micro_stats['C']['support_rate']}%** Micro) and reduced contradictions down to **{summary_by_cond.loc[2, 'Macro Contra (%)']}%** Macro / **{micro_stats['C']['contra_rate']}%** Micro.
+1. **Targeted Revision Enhances Faithfulness**: Condition C achieved the highest factual support rate (**{summary_by_cond.loc[2, 'Factual Support (%)']}%** Macro / **{micro_stats['C']['support_rate']}%** Micro) and reduced contradictions down to **{summary_by_cond.loc[2, 'Contradiction (%)']}%** Macro / **{micro_stats['C']['contra_rate']}%** Micro.
 2. **Breakthrough on Code-Mixed Hinglish**: Condition A suffered from extreme factual inversion on code-mixed dialogue (30.0% contradiction rate). Factuality-aware prompting and verification eliminated contradictions down to **0.0%** and quadrupled the support rate.
 3. **Safety Through Bounded Revision**: The 3-rule policy with bounded revision (k=2) prevented runaway loops while safely terminating revisions for documents with unresolved source ambiguities.
 """

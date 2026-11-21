@@ -23,8 +23,14 @@ class NLIVerifier:
             self.device = device
 
         print(f"Loading NLI Model ({model_name}) on {self.device}...")
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name, local_files_only=True)
+        except Exception:
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        try:
+            self.model = AutoModelForSequenceClassification.from_pretrained(model_name, local_files_only=True)
+        except Exception:
+            self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
         try:
             self.model.to(torch.device(self.device))
         except Exception:

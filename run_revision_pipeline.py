@@ -1,3 +1,5 @@
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
 """
 FactIndic - Phase 5: Condition C (NLI-Guided Targeted Revision Loop) Runner
 Implements the 3 critical implementation decisions:

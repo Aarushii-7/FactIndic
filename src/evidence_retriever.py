@@ -54,6 +54,9 @@ class EvidenceRetriever:
 
         print(f"Loading Evidence Retriever ({model_name}) on {self.device}...")
         try:
+            try:
+            self.model = SentenceTransformer(model_name, device=self.device, local_files_only=True)
+        except Exception:
             self.model = SentenceTransformer(model_name, device=self.device)
         except Exception:
             self.device = "cpu"
