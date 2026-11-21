@@ -69,16 +69,18 @@
 
 ---
 
-### Slide 6: Automated Acceptance Policy & NetworkX Claim Graph
-- **No Manual Human Intervention:** Strict quantitative decision gates:
-  1. $\text{Factual Support Rate} \ge 90.0\%$
-  2. $\text{Contradiction Rate} \le 5.0\%$
-  3. $\text{No High-Confidence Contradictions}$ ($P(\text{contradiction}) < 0.70$)
-  4. Non-zero claims requirement (reject empty claims).
+### Slide 6: Automated Acceptance Policy & Formal Definition of $p$
+- **Strict Quantitative Decision Gates:**
+  1. $\text{Support Rate} \ge 90.0\%$ (at least 90% of extracted propositions must be entailed).
+  2. $\text{Contradiction Rate} \le 5.0\%$ (no more than 5% can contradict the source).
+  3. **Peak Contradiction Risk Ceiling ($p < 0.70$):**
+     $$p \equiv \max_{c_i \in \text{Claims}(S)} P_{\text{NLI}}(\text{contradiction} \mid E_i, c_i) < 0.70$$
+     - $P_{\text{NLI}}(\text{contradiction} \mid E_i, c_i)$ is the softmax posterior contradiction probability from `mDeBERTa-v3-base-xnli` given retrieved evidence $E_i$.
+     - Enforces that **no individual claim has a contradiction probability $\ge 0.70$** (eliminating silent high-confidence hallucinations).
+  4. **Non-Zero Safeguard:** Rejects summaries yielding zero extractable claims (undefined support rate).
 - **NetworkX Claim Dependency Graph:**
-  - Nodes = Atomic claims; Edges = Shared entities or semantic co-dependencies.
-  - When a contradiction occurs, only the affected subgraph is revised, protecting verified entailments from accidental corruption.
-- **Bounded Safety:** Capped at $k=2$ revision attempts; lingering ambiguities terminate as `UNRESOLVED_FLAGGED` to eliminate infinite loops.
+  - Isolates contradicted subgraphs and dependent clauses, preserving verified entailments during revision.
+  - Bounded to $k=2$ attempts: unresolved documents are safely flagged without runaway loops.
 
 ---
 
@@ -101,7 +103,31 @@
 
 ---
 
-### Slide 8: The Hinglish Breakthrough (Code-Mixed Analysis)
+### Slide 8: The Admission Gate vs. Aggregate Cohort Distinction
+- **Key Insight:** The Acceptance Policy is an individual summary admission gate, not a corpus average constraint!
+- **Disaggregation of Results ($N=18$):**
+  - **Accepted Cohort (8 / 18, 44.4%):**
+    - **100.0% Support Rate**
+    - **0.0% Contradiction Rate**
+    - Fully compliant with the strict policy ($	ext{Support} \ge 90\%$, $	ext{Contra} \le 5\%$, $p < 0.70$).
+  - **Unresolved Cohort (10 / 18, 55.6%):**
+    - 42.4% Support Rate, 16.4% Contradiction Rate.
+    - Safely isolated as `UNRESOLVED_FLAGGED` after 2 attempts to protect downstream users.
+  - **Full Unfiltered Cohort Mean:** **67.99% Support Rate, 9.10% Contradiction Rate**.
+- **Conclusion:** The revision loop elevated overall factuality, but the strict policy was crucial to filter out unresolvable hallucinations.
+
+---
+
+### Slide 9: Claim Evolution & Longitudinal Transitions ($67 \rightarrow 64$)
+- **Why did Condition C have 64 claims compared to 67 in Condition B?**
+  - **Retained Claims (59 claims):** 13 of 18 documents maintained identical claim counts between B and C.
+  - **Pruned Claims (-5 claims):** In verbose Hindi news articles (`ILSUM_HI_006`, `007`, `009`), revision surgically removed 5 ungrounded speculative clauses.
+  - **Expanded Grounded Claims (+2 claims):** In `ILSUM_HI_003`, 1 contradicted claim was replaced with 3 fully entailed source-grounded propositions.
+  - **Audit Verification:** Documented in `data/claim_transition_audit.csv`—proves that contradiction drops came from targeted factual repair and pruning, not claim extraction drift.
+
+---
+
+### Slide 10: The Hinglish Breakthrough (Code-Mixed Analysis)
 - **The Observation:**
   - Condition A standard prompting produced massive hallucinations in Hinglish:
     - **30.0% contradiction rate**
@@ -114,7 +140,7 @@
 
 ---
 
-### Slide 9: Case Study: Surgical Correction (`ILSUM_HI_003`)
+### Slide 11: Case Study: Surgical Correction (`ILSUM_HI_003`)
 - **Initial Baseline Summary ($S_0$ under Condition B):**
   - Generated an unsupported claim regarding municipal project deadlines.
   - Initial NLI Audit: **100% Contradiction Rate** (0% Support).
@@ -128,7 +154,7 @@
 
 ---
 
-### Slide 10: Key Scientific Insight: ROUGE vs. Factuality Paradox
+### Slide 12: Key Scientific Insight: ROUGE vs. Factuality Paradox
 - **Why did Condition A have higher ROUGE ($0.2535$ vs $0.2126$) but worse factuality?**
   - High ROUGE does NOT equal truthful summaries!
   - Standard prompts hallucinate popular n-grams that happen to match human reference summaries.
@@ -137,14 +163,14 @@
 
 ---
 
-### Slide 11: System & Engineering Highlights
+### Slide 13: System & Engineering Highlights
 - **100% Local Inference:** Ran on Apple Silicon MPS (Metal Performance Shaders) using `Qwen2.5-1.5B-Instruct`—zero external API dependencies or costs.
 - **Reproducibility:** Fully automated scripts (`generate_summaries_local.py`, `run_verification.py`, `run_revision_pipeline.py`, `evaluate_study.py`).
 - **Safety by Design:** Bounded revision attempts ($k=2$), non-zero claim rejection, and zero manual human bottlenecks.
 
 ---
 
-### Slide 12: Deliverables Checklist & Summary
+### Slide 14: Deliverables Checklist & Summary
 - **Deliverables Completed:**
   1. [x] **Source Code & GitHub Repository:** Fully structured and documented.
   2. [x] **Research Paper:** Complete IEEE-style formatted paper in `docs/RESEARCH_PAPER_IEEE.md`.

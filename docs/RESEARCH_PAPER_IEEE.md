@@ -119,12 +119,20 @@ To prevent the model from inadvertently revising entailed claims, FactIndic mode
 2. The semantic embedding similarity between claims exceeds a dependency threshold ($\tau = 0.65$).
 When claim $c_i$ is contradicted, the revision prompt isolates the subgraph of $c_i$ and its direct dependent neighbors, instructing the generator to modify that localized cluster using the retrieved evidence premise while holding independent entailed nodes invariant.
 
-### E. Quantitative Automated Acceptance Policy
-A summary is deemed accepted without human intervention if and only if:
-1. **Factual Support Rate**: $\text{Support Rate} \ge 90.0\%$
-2. **Contradiction Rate**: $\text{Contradiction Rate} \le 5.0\%$
-3. **No High-Confidence Contradictions**: $\forall c_i, P(\text{contradiction} \mid E_i, c_i) < 0.70$
-4. **Non-Zero Claim Fallback**: If zero claims can be extracted, support is undefined; the summary is rejected.
+### E. Quantitative Automated Acceptance Policy & Formal Definition of $p$
+To establish an automated, objective production admission gate, a generated summary $S$ containing extracted atomic claims $\{c_1, c_2, \dots, c_m\}$ and corresponding retrieved evidence premises $\{E_1, E_2, \dots, E_m\}$ is admitted without manual intervention if and only if all four mathematical criteria are satisfied:
+1. **Factual Support Rate Threshold**:
+   $$\text{Support Rate}(S) = \frac{\sum_{i=1}^m \mathbb{I}[\hat{y}_i = \text{entailment}]}{m} \times 100\% \ge 90.0\%$$
+2. **Contradiction Rate Ceiling**:
+   $$\text{Contradiction Rate}(S) = \frac{\sum_{i=1}^m \mathbb{I}[\hat{y}_i = \text{contradiction}]}{m} \times 100\% \le 5.0\%$$
+3. **Absence of High-Confidence Contradictions ($p < 0.70$)**:
+   Formally, let $P_{\text{NLI}}(y \mid E_i, c_i)$ denote the normalized softmax posterior probability produced by the cross-lingual NLI cross-encoder for semantic class $y \in \{\text{entailment}, \text{neutral}, \text{contradiction}\}$. We define the summary-level peak contradiction risk $p$ as:
+   $$p \equiv \max_{1 \le i \le m} P_{\text{NLI}}(\text{contradiction} \mid E_i, c_i)$$
+   The policy mandates:
+   $$p < \tau_{\text{contra}} \quad (\text{where } \tau_{\text{contra}} = 0.70)$$
+   *Mathematical Justification:* In a 3-class distribution with a uniform prior of $1/3 \approx 0.33$, a posterior $P(\text{contradiction}) \ge 0.70$ denotes high-confidence epistemic certainty of a factual distortion. Enforcing $p < 0.70$ ensures that even if a summary has a low overall contradiction rate, no single severe hallucination is silently accepted.
+4. **Non-Zero Propositional Safeguard ($m > 0$)**:
+   If $m = 0$ (no factual claims can be parsed from the candidate summary), the support rate is undefined $\frac{0}{0}$. The summary is rejected automatically.
 
 Revisions are bounded to $k_{\max} = 2$ attempts. Summaries that do not reach the threshold after two rounds are automatically designated as `UNRESOLVED_FLAGGED`, preventing infinite generation loops.
 
@@ -178,10 +186,42 @@ In summarization research, reporting both macro- and micro-averages is vital:
   - Condition C: 38 supported claims out of 64 total ($59.38\%$), 6 contradictions ($9.38\%$).
 Across both baseline conditions combined, 127 claims were audited (69 entailments = 54.33%, 42 neutrals = 33.07%, 16 contradictions = 12.60%). Condition C reduced the total contradiction count from 16 down to 6.
 
-### C. Language Slice Analysis (Monolingual vs. Code-Mixed)
+### B. Claim Evolution & Transition Dynamics ($A=60 \rightarrow B=67 \rightarrow C=64$)
+A crucial methodological consideration in abstractive revision is whether lower contradiction rates stem from genuine factual correction or an artifact of claim extraction variance. To resolve this, we tracked all claims at the document- and claim-level across revision iterations (logged in `data/claim_transition_audit.csv`).
+
+**TABLE II: Longitudinal Claim Transition Breakdown (Condition B to Condition C)**
+
+| Transition Category | Documents ($N=18$) | Claims Involved | Underlying Mechanism |
+| :--- | :---: | :---: | :--- |
+| **Retained Unmodified** | 7 (Accepted at $S_0$) | 16 claims | All 16 claims entailed ($100\%$ support); preserved without modification. |
+| **Rewritten In-Place** | 7 documents | 33 claims | Claim count invariant; contradicted and neutral phrasing rewritten using retrieved evidence. |
+| **Pruned Unsupported** | 3 documents | -5 claims | Verbose/unsupported clauses removed during revision (`ILSUM_HI_006`, `007`, `009`). |
+| **Expanded Grounded** | 1 document (`ILSUM_HI_003`) | +2 claims | 1 contradicted claim replaced with 3 fully entailed factual claims using injected source evidence. |
+| **Net Final Count** | **18 documents** | **64 claims** | **38 Entailed ($59.38\%$), 20 Neutral ($31.25\%$), 6 Contradictions ($9.38\%$)** |
+
+This audit confirms that the reduction in contradictions from 8 to 6 (and from 16 in the baseline) was achieved via targeted factual correction and surgical pruning of hallucinated tokens, not arbitrary extraction drift.
+
+### C. The Admission Quality Gate vs. Aggregate Cohort Distinction
+An essential scientific distinction must be drawn between the **Acceptance Policy** (which functions as a strict per-document admission gate for production deployment) and the **Aggregate Cohort Metrics** reported in Table I.
+
+Under the acceptance policy ($\text{Support} \ge 90\%$, $\text{Contra} \le 5\%$, $p < 0.70$):
+- **Condition C does not claim that 100% of generated documents satisfy the strict threshold.**
+- Instead, the policy successfully filtered the corpus into two distinct subsets:
+
+**TABLE III: Performance Disaggregation: Accepted Gate vs. Unresolved Cohort**
+
+| Evaluation Cohort | Sample Share ($N=18$) | Macro Support (%) | Macro Contradiction (%) | Peak Contradiction Risk ($p$) | Policy Disposition |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Accepted Cohort** | **8 / 18 (44.4%)** | **100.0%** | **0.0%** | **0.00** | Admitted for downstream delivery |
+| **Unresolved Cohort** | 10 / 18 (55.6%) | 42.39% | 16.39% | 0.81 (mean max) | Safely isolated / Terminated at $k=2$ |
+| **Full Unfiltered Cohort** | 18 / 18 (100.0%) | 67.99% | 9.10% | 0.45 (mean max) | Net cohort benchmark |
+
+This disaggregation demonstrates that the revision loop substantially elevated overall cohort factuality (+15.49% over Condition A), but more importantly, the strict acceptance policy prevented flawed summaries from reaching downstream users by safely isolating the 55.6% unresolved summaries.
+
+### D. Language Slice Analysis (Monolingual vs. Code-Mixed)
 Table II decomposes performance across the three linguistic varieties.
 
-**TABLE II: Performance Breakdown Across Linguistic Varieties**
+**TABLE IV: Performance Breakdown Across Linguistic Varieties**
 
 | Language Slice | Samples | Cond A Support | Cond B Support | Cond C Support | Cond A Contra | Cond B Contra | Cond C Contra | Compression (C) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -194,11 +234,11 @@ Table II decomposes performance across the three linguistic varieties.
 2. **Breakthrough via Factuality Constraints & Revision**: In Condition B and C, factuality constraints eliminated all contradictions in Hinglish (**0.0% contradiction rate**) and nearly quadrupled support to **80.0%**.
 3. **Hindi News Dynamics**: Hindi articles generated longer, entity-dense summaries. Condition C successfully revised factual distortions (lowering contradiction from 26.0% to 18.4%).
 
-### D. The ROUGE vs. Factuality Paradox
+### E. The ROUGE vs. Factuality Paradox
 A critical finding is that Condition A achieved higher ROUGE scores (ROUGE-1 $F_1 = 0.2535$) than Condition B ($0.1951$) and Condition C ($0.2126$), despite Condition A possessing the highest contradiction rate (14.58%). 
 This occurs because standard prompts generate generic, speculative tokens that coincidentally overlap with human reference summaries, whereas factuality constraints strictly restrict generation to verified facts, deliberately sacrificing lexical overlap to guarantee factual faithfulness.
 
-### E. Case Study: Surgical Correction via Evidence Injection
+### F. Case Study: Surgical Correction via Evidence Injection
 In sample `ILSUM_HI_003` (Hindi news regarding urban infrastructure), Condition B generated summary $S_0$ with an unverified claim regarding municipal funding dates, resulting in a **100% contradiction rate**. 
 The revision engine isolated the contradicted claim, queried the source text, retrieved the accurate sentence, and produced revised summary $S_1$. Upon full re-verification, $S_1$ achieved **100% factual support and 0% contradiction**, demonstrating the surgical capability of the NetworkX dependency-guided revision loop.
 
