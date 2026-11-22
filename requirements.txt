@@ -23,3 +23,7 @@ google-genai>=0.1.0
 
 # Optional Accelerators (Recommended for macOS Apple Silicon MPS / CUDA)
 accelerate>=0.28.0
+
+# Web API Backend for UI
+fastapi>=0.110.0
+uvicorn>=0.29.0

@@ -25,3 +25,10 @@ data/ilsum/*_filtered.csv
 .ipynb_checkpoints/
 .vscode/
 .idea/
+
+# Frontend dependencies
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -20,15 +20,36 @@ Summary:
 JSON:"""
 
 def rule_based_claim_split(text: str) -> List[str]:
-    """Fallback: splits summary on sentences and major clauses if LLM JSON parsing fails."""
-    # Split on sentence boundaries and bullet points
-    raw = re.split(r"(?<=[.!?।\n])\s+|(?<=\*)\s+", text)
-    cleaned = []
-    for s in raw:
-        s = re.sub(r"^[\s\*\-\d\.\)]+", "", s).strip()
-        if len(s) > 10:
-            cleaned.append(s)
-    return cleaned if cleaned else [text.strip()]
+    """
+    Decomposes summary text into atomic, checkable factual claims.
+    Splits across terminal punctuation (. ! ? । \n ; —) and compound contrastive clauses (while, whereas, जबकि),
+    while pruning malformed or incomplete fragments.
+    """
+    # 1. Strip markdown bold/italic/bullet markers
+    clean_text = re.sub(r'[*_#]', '', str(text).strip())
+    
+    # 2. Split on sentence boundaries, newlines, semicolons, and em-dashes
+    raw_sentences = re.split(r'(?<=[.!?।\n;])\s+|(?<=[—])\s*', clean_text)
+    
+    atomic_claims = []
+    for sent in raw_sentences:
+        # Strip leading numbers or bullets (e.g., '1. ', '- ')
+        s = re.sub(r'^[\s\d\.\)\-]+', '', sent).strip()
+        if not s:
+            continue
+        
+        # 3. Check for compound clauses joined by contrastive subordinators
+        clauses = re.split(r'(?<=,)\s+(?:while|whereas|जबकि|परन्तु)\s+', s, flags=re.IGNORECASE)
+        for c in clauses:
+            c = c.strip().rstrip('.,;!?।')
+            words = c.split()
+            # Must be a substantial complete proposition (>= 3 words, >= 10 chars)
+            if len(words) >= 3 and len(c) >= 10:
+                # Re-attach terminal punctuation appropriately
+                term = '।' if any('\u0900' <= ch <= '\u097F' for ch in c) else '.'
+                atomic_claims.append(c + term)
+
+    return atomic_claims if atomic_claims else [clean_text]
 
 class ClaimExtractor:
     def __init__(self, pipe=None):

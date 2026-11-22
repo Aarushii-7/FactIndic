@@ -1,0 +1,1412 @@
+[
+  {
+    "id": "HI-01",
+    "lang": "hindi",
+    "title": "ISRO Satellite Launch (Science News)",
+    "source": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+    "elapsed_sec": 46.81,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+      "word_count": 47,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 10.33,
+      "support_rate": 66.67,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 33.33,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0834,
+          "probabilities": {
+            "entailment": 0.5381,
+            "neutral": 0.3787,
+            "contradiction": 0.0834
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9707,
+            "neutral": 0.0184,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "primary_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0051,
+          "probabilities": {
+            "entailment": 0.9297,
+            "neutral": 0.0651,
+            "contradiction": 0.0051
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+      "word_count": 46,
+      "compression_ratio": 2.13,
+      "inference_time_sec": 11.69,
+      "support_rate": 66.67,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 33.33,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह लॉन्च किया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0675,
+          "probabilities": {
+            "entailment": 0.5874,
+            "neutral": 0.3452,
+            "contradiction": 0.0675
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9707,
+            "neutral": 0.0184,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "primary_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0051,
+          "probabilities": {
+            "entailment": 0.9297,
+            "neutral": 0.0651,
+            "contradiction": 0.0051
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "अंतरिक्ष उपग्रह \"सतीश\" श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से लॉन्च किया गया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाओं प्रदान करेगा।",
+      "word_count": 32,
+      "compression_ratio": 31.91,
+      "inference_time_sec": 19.73,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "अंतरिक्ष उपग्रह \"सतीश\" श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से लॉन्च किया गया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0473,
+          "probabilities": {
+            "entailment": 0.1261,
+            "neutral": 0.8267,
+            "contradiction": 0.0473
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाओं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.005,
+          "probabilities": {
+            "entailment": 0.9282,
+            "neutral": 0.067,
+            "contradiction": 0.005
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "1. मुख्य घटना / कार्य (Main Event): ISRO ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।\n2. प्रमुख व्यक्ति व संस्थाएं (Entities & Roles - किसने क्या किया): ISRO ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।\n3. संख्याएं व आंकड़े (Numbers & Metrics - बिल्क"
+    }
+  },
+  {
+    "id": "HI-02",
+    "lang": "hindi",
+    "title": "GST Revenue ₹20.18L Cr (Economic Data)",
+    "source": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+    "elapsed_sec": 42.95,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "वित्त मंत्रालय ने वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 39,
+      "compression_ratio": 13.33,
+      "inference_time_sec": 7.63,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9365,
+            "neutral": 0.0525,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 40,
+      "compression_ratio": 11.11,
+      "inference_time_sec": 10.39,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0164,
+          "probabilities": {
+            "entailment": 0.918,
+            "neutral": 0.0654,
+            "contradiction": 0.0164
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 33,
+      "compression_ratio": 26.67,
+      "inference_time_sec": 20.27,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.1354,
+          "probabilities": {
+            "entailment": 0.3459,
+            "neutral": 0.5186,
+            "contradiction": 0.1354
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ],
+      "structured_facts": "1. मुख्य घटना / कार्य (Main Event): वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया।\n\n2. प्रमुख व्यक्ति व संस्थाएं (Entities & Roles - किसने क्या किया): वित्त मंत्रालय ने घोषणा की।\n\n3. संख्याएं व आंकड़े (Numbers & Metrics - बिल्कुल यथारूप): वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया।\n\n4. तिथियां व समय (Dates & Times - ज"
+    }
+  },
+  {
+    "id": "HI-03",
+    "lang": "hindi",
+    "title": "Health Advisory (Uncertainty & Advisory)",
+    "source": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+    "elapsed_sec": 55.01,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+      "word_count": 59,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 12.43,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0616,
+          "probabilities": {
+            "entailment": 0.7563,
+            "neutral": 0.182,
+            "contradiction": 0.0616
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0632,
+          "probabilities": {
+            "entailment": 0.5762,
+            "neutral": 0.3606,
+            "contradiction": 0.0632
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+      "word_count": 59,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 14.66,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0616,
+          "probabilities": {
+            "entailment": 0.7563,
+            "neutral": 0.182,
+            "contradiction": 0.0616
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0632,
+          "probabilities": {
+            "entailment": 0.5762,
+            "neutral": 0.3606,
+            "contradiction": 0.0632
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+      "word_count": 49,
+      "compression_ratio": 16.95,
+      "inference_time_sec": 22.86,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0018,
+          "probabilities": {
+            "entailment": 0.8672,
+            "neutral": 0.1311,
+            "contradiction": 0.0018
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0632,
+          "probabilities": {
+            "entailment": 0.5762,
+            "neutral": 0.3606,
+            "contradiction": 0.0632
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ],
+      "structured_facts": "1. मुख्य घटना / कार्य (Main Event): सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है।\n2. प्रमुख व्यक्ति व संस्थाएं (Entities & Roles - किसने क्या किया): स्वास्थ्य विभाग ने चेतावनी दी है।\n3. संख्याएं व आंकड़े (Numbers & Metrics - बिल्कुल यथारूप): अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है।\n4. तिथियां व समय (Dates & Times"
+    }
+  },
+  {
+    "id": "HG-01",
+    "lang": "hinglish",
+    "title": "FreshRoute Startup Launch (Business & Metrics)",
+    "source": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+    "elapsed_sec": 29.63,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "FreshRoute, a Bengaluru-based startup, launched its grocery delivery service on November 19, 2026. The company plans to start with deliveries in seven areas of Bengaluru. It has signed agreements with 42 local farmers and 18 delivery partners so far. The goal is to deliver orders within 12 to 24 hours by the end of the first quarter. The company aims to reach 3,500 customers within the first four months. They have not finalized an expansion plan for other cities yet. Details about delivery fees and minimum order values will be announced soon.",
+      "word_count": 92,
+      "compression_ratio": 18.58,
+      "inference_time_sec": 5.05,
+      "support_rate": 71.43,
+      "contradiction_rate": 14.29,
+      "neutral_rate": 14.29,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "FreshRoute, a Bengaluru-based startup, launched its grocery delivery service on November 19, 2026.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0098,
+          "probabilities": {
+            "entailment": 0.9438,
+            "neutral": 0.0466,
+            "contradiction": 0.0098
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The company plans to start with deliveries in seven areas of Bengaluru.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0034,
+          "probabilities": {
+            "entailment": 0.9956,
+            "neutral": 0.0009,
+            "contradiction": 0.0034
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "It has signed agreements with 42 local farmers and 18 delivery partners so far.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0011,
+          "probabilities": {
+            "entailment": 0.998,
+            "neutral": 0.001,
+            "contradiction": 0.0011
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C4",
+          "claim_text": "The goal is to deliver orders within 12 to 24 hours by the end of the first quarter.",
+          "label": "contradiction",
+          "nli_label": "contradiction",
+          "prob_contradiction": 0.4783,
+          "probabilities": {
+            "entailment": 0.4646,
+            "neutral": 0.0571,
+            "contradiction": 0.4783
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The claim directly conflicts with the retrieved source evidence."
+        },
+        {
+          "claim_id": "C5",
+          "claim_text": "The company aims to reach 3,500 customers within the first four months.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0043,
+          "probabilities": {
+            "entailment": 0.9927,
+            "neutral": 0.0032,
+            "contradiction": 0.0043
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C6",
+          "claim_text": "They have not finalized an expansion plan for other cities yet.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0,
+          "probabilities": {
+            "entailment": 0.0,
+            "neutral": 1.0,
+            "contradiction": 0.0
+          },
+          "retrieved_evidence": "",
+          "primary_evidence": "No relevant evidence found in the document.",
+          "explanation": "The claim could not be verified because no relevant evidence was found in the source document (unsupported / out-of-context)."
+        },
+        {
+          "claim_id": "C7",
+          "claim_text": "Details about delivery fees and minimum order values will be announced soon.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0027,
+          "probabilities": {
+            "entailment": 0.9951,
+            "neutral": 0.0021,
+            "contradiction": 0.0027
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "FreshRoute, a Bengaluru-based startup, launched its grocery delivery service on November 19, 2026, with initial coverage in seven areas. The company has signed agreements with 42 local farmers and 18 delivery partners. Deliveries are scheduled to be made within 12 to 24 hours. By April, the goal is to have reached 3,500 customers. However, FreshRoute has not finalized an expansion plan for other cities yet. Details about delivery fees and minimum order values will be announced soon.",
+      "word_count": 77,
+      "compression_ratio": 31.86,
+      "inference_time_sec": 5.11,
+      "support_rate": 66.67,
+      "contradiction_rate": 16.67,
+      "neutral_rate": 16.67,
+      "accepted": false,
+      "status": "REVISE_HIGH_CONF_CONTRADICTION",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "FreshRoute, a Bengaluru-based startup, launched its grocery delivery service on November 19, 2026, with initial coverage in seven areas.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0042,
+          "probabilities": {
+            "entailment": 0.9868,
+            "neutral": 0.0087,
+            "contradiction": 0.0042
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The company has signed agreements with 42 local farmers and 18 delivery partners.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0006,
+          "probabilities": {
+            "entailment": 0.999,
+            "neutral": 0.0006,
+            "contradiction": 0.0006
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "Deliveries are scheduled to be made within 12 to 24 hours.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0263,
+          "probabilities": {
+            "entailment": 0.9722,
+            "neutral": 0.0016,
+            "contradiction": 0.0263
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C4",
+          "claim_text": "By April, the goal is to have reached 3,500 customers.",
+          "label": "contradiction",
+          "nli_label": "contradiction",
+          "prob_contradiction": 0.9897,
+          "probabilities": {
+            "entailment": 0.0031,
+            "neutral": 0.0072,
+            "contradiction": 0.9897
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The claim directly conflicts with the retrieved source evidence."
+        },
+        {
+          "claim_id": "C5",
+          "claim_text": "However, FreshRoute has not finalized an expansion plan for other cities yet.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0,
+          "probabilities": {
+            "entailment": 0.0,
+            "neutral": 1.0,
+            "contradiction": 0.0
+          },
+          "retrieved_evidence": "",
+          "primary_evidence": "No relevant evidence found in the document.",
+          "explanation": "The claim could not be verified because no relevant evidence was found in the source document (unsupported / out-of-context)."
+        },
+        {
+          "claim_id": "C6",
+          "claim_text": "Details about delivery fees and minimum order values will be announced soon.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0027,
+          "probabilities": {
+            "entailment": 0.9951,
+            "neutral": 0.0021,
+            "contradiction": 0.0027
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "FreshRoute launched its grocery delivery service on November 19, 2026, serving seven initial areas in Bengaluru. The company has signed agreements with 42 local farmers and 18 delivery partners. A target of delivering orders within 12 to 24 hours has been set. The goal is to reach 3,500 customers within the first four months. However, the expansion plan for second cities has not yet been finalized. Delivery charges and minimum order values will be announced next week.",
+      "word_count": 77,
+      "compression_ratio": 31.86,
+      "inference_time_sec": 14.81,
+      "support_rate": 83.33,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 16.67,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "FreshRoute launched its grocery delivery service on November 19, 2026, serving seven initial areas in Bengaluru.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0369,
+          "probabilities": {
+            "entailment": 0.834,
+            "neutral": 0.1289,
+            "contradiction": 0.0369
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The company has signed agreements with 42 local farmers and 18 delivery partners.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0006,
+          "probabilities": {
+            "entailment": 0.999,
+            "neutral": 0.0006,
+            "contradiction": 0.0006
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "A target of delivering orders within 12 to 24 hours has been set.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0021,
+          "probabilities": {
+            "entailment": 0.9976,
+            "neutral": 0.0004,
+            "contradiction": 0.0021
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C4",
+          "claim_text": "The goal is to reach 3,500 customers within the first four months.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0028,
+          "probabilities": {
+            "entailment": 0.9956,
+            "neutral": 0.0016,
+            "contradiction": 0.0028
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C5",
+          "claim_text": "However, the expansion plan for second cities has not yet been finalized.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0,
+          "probabilities": {
+            "entailment": 0.0,
+            "neutral": 1.0,
+            "contradiction": 0.0
+          },
+          "retrieved_evidence": "",
+          "primary_evidence": "No relevant evidence found in the document.",
+          "explanation": "The claim could not be verified because no relevant evidence was found in the source document (unsupported / out-of-context)."
+        },
+        {
+          "claim_id": "C6",
+          "claim_text": "Delivery charges and minimum order values will be announced next week.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0059,
+          "probabilities": {
+            "entailment": 0.9917,
+            "neutral": 0.0027,
+            "contradiction": 0.0059
+          },
+          "retrieved_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "primary_evidence": "Bengaluru-based startup FreshRoute ne 19 November 2026 ko apni grocery delivery service launch ki. Company ke founder Rohan Mehta ne bataya ki initially service Bengaluru ke 7 areas mein available hogi. Startup ne ab tak 42 local farmers aur 18 delivery partners ke saath agreements sign kiye hain. Customers ko order place karne ke 12 se 24 hours ke andar delivery provide karne ka target rakha gaya hai. Company ka aim hai ki first four months mein 3,500 customers tak reach kiya ja sake. Rohan ne kaha ki company abhi doosre cities mein expansion plan finalize nahi kar rahi hai. Delivery charges aur minimum order value ki details next week announce ki jayengi.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "| Fact ID | Who | What Happened | When | Where | Why | How Much | Details |\n|---------|-----|--------------|------|-------|-----|----------|---------|\n| 1       | FreshRoute | Launch of Grocery Delivery Service | 19 November 2026 | Bengaluru | New Product | N/A | N/A |\n| 2       | Rohan Mehta | Announced Initial Service Areas | N/A | Bengaluru | Information | N/A | N/A |\n| 3       | FreshRoute | Agreements with Local Farmers and Delivery Partners Signed | N/A | N/A | Action | N/A | N/A |\n| 4       | FreshRoute | Targeted Delivery within 12 to 24 Hours | N/A | N/A | Goal | N/A | N/A |\n| 5       | FreshRoute | Aim to Reach 3,500 Customers in First Four Months | N/A | N/A | Objective | N/A | N/A |\n| 6       | FreshRoute | Expansion Plan for Second Cities Not Finalized Yet | N/A | N/A | Decision | N/A | N/A |\n| 7       | FreshRoute | Delivery Charges and Minimum Order Value Details Next Week Announced | N/A | N/A | Action | N/A | N/A |"
+    }
+  },
+  {
+    "id": "HG-02",
+    "lang": "hinglish",
+    "title": "Study Schedule Planning (Purpose vs Outcome)",
+    "source": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+    "elapsed_sec": 11.62,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "Students struggle with balancing their daily study schedules while missing important assignment deadlines due to conflicting class and project times.",
+      "word_count": 20,
+      "compression_ratio": 31.03,
+      "inference_time_sec": 1.1,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Students struggle with balancing their daily study schedules while missing important assignment deadlines due to conflicting class and project times.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0018,
+          "probabilities": {
+            "entailment": 0.2617,
+            "neutral": 0.7363,
+            "contradiction": 0.0018
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+      "word_count": 22,
+      "compression_ratio": 24.14,
+      "inference_time_sec": 1.59,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.998,
+            "neutral": 0.0019,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "Many students are planning their daily study schedules to avoid missing important assignment deadlines. However, managing classes and projects during class and project times proves to be challenging.",
+      "word_count": 28,
+      "compression_ratio": 3.45,
+      "inference_time_sec": 8.66,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Many students are planning their daily study schedules to avoid missing important assignment deadlines.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0008,
+          "probabilities": {
+            "entailment": 0.9834,
+            "neutral": 0.016,
+            "contradiction": 0.0008
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "However, managing classes and projects during class and project times proves to be challenging.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.9951,
+            "neutral": 0.0045,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "1. **Main Event / Topic:** Students' daily study schedules planning to avoid missing important assignment deadlines.\n2. **Key Entities & Actions:**\n   - Students: Planning their daily study schedules.\n   - Important Assignment Deadlines: To be avoided by students.\n   - Classes: Must be managed during class times.\n   - Projects: Must be managed during project times.\n3. **Numbers & Metrics:**\n   - Many students: Apna daily study schedule plans.\n   - Important assignment deadlines: Missed.\n4. **Dates & Times:**\n   - Classes: Beech time.\n   - Projects: Beech time.\n5. **Negations & Cancellations:**\n   - No specific cancellations mentioned.\n6. **Status & Certainty:**\n   - Ongoing: The situation described continues to exist.\n7. **Attribution:**\n   - Not specified in the given text."
+    }
+  },
+  {
+    "id": "HG-03",
+    "lang": "hinglish",
+    "title": "Placement Talk Relocation (Negation & Venue)",
+    "source": "Karan: Guys kal subah 10 baje college auditorium mein placement talk hai. Simran: Par sunne mein aaya tha ki placement drive cancel ho gaya hai? Karan: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai.",
+    "elapsed_sec": 15.82,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "The conversation discusses a scheduled job fair at a college auditorium being canceled due to changes in venue from a seminar hall to an auditorium.",
+      "word_count": 25,
+      "compression_ratio": 44.44,
+      "inference_time_sec": 1.3,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The conversation discusses a scheduled job fair at a college auditorium being canceled due to changes in venue from a seminar hall to an auditorium.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.1639,
+          "probabilities": {
+            "entailment": 0.6152,
+            "neutral": 0.2208,
+            "contradiction": 0.1639
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+      "word_count": 22,
+      "compression_ratio": 51.11,
+      "inference_time_sec": 1.79,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.156,
+          "probabilities": {
+            "entailment": 0.8271,
+            "neutral": 0.0169,
+            "contradiction": 0.156
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "Karan informs his friends that there's an upcoming placement talk scheduled in the college auditorium at 10 AM today. Simran initially asked if the placement drive had been canceled but Karan clarifies that the drive is still ongoing, with the venue changing from a seminar hall to the college auditorium.",
+      "word_count": 50,
+      "compression_ratio": -11.11,
+      "inference_time_sec": 12.37,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Karan informs his friends that there's an upcoming placement talk scheduled in the college auditorium at 10 AM today.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.1659,
+          "probabilities": {
+            "entailment": 0.467,
+            "neutral": 0.3672,
+            "contradiction": 0.1659
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Simran initially asked if the placement drive had been canceled but Karan clarifies that the drive is still ongoing, with the venue changing from a seminar hall to the college auditorium.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0245,
+          "probabilities": {
+            "entailment": 0.9614,
+            "neutral": 0.0142,
+            "contradiction": 0.0245
+          },
+          "retrieved_evidence": "n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai? n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "primary_evidence": "n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "|Fact ID| Who Did What/Received| Number/Metric| Date/Time| Negation/Cancellation| Status/Certainty| Attribution|\n|---|---|---|---|---|---|---|\n|1| Karan informs about upcoming placement talk at college auditorium.| Not specified| Not specified| No cancellation| Ongoing| Karan|\n|2| Simran asks if the placement drive has been canceled.| Not specified| Not specified| No cancellation| Ongoing| Simran|\n|3| Karan confirms that the placement drive is still ongoing.| Not specified| Not specified| No cancellation| Completed| Karan|\n|4| The placement talk will be held in the college auditorium.| Not specified| Not specified| No cancellation| Ongoing| Karan|\n|5| The previous location was a seminar hall.| Not specified| Not specified| No cancellation| Ongoing| Karan|\n|6| The new location is the college auditorium.| Not specified| Not specified| No cancellation| Ongoing| Karan|\n|7| Karan announces the details of the upcoming event.| Not specified| Not specified| No cancellation| Ongoing| Karan|"
+    }
+  },
+  {
+    "id": "EN-01",
+    "lang": "english",
+    "title": "RBI Repo Rate 6.5% (Monetary Policy)",
+    "source": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+    "elapsed_sec": 16.1,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "The Reserve Bank of India maintained its benchmark repo rate at 6.5% for the eighth time, despite moderate inflation and stable food prices. Governor Shaktikanta Das emphasized that food price volatility continues to pose a risk.",
+      "word_count": 36,
+      "compression_ratio": 16.28,
+      "inference_time_sec": 1.93,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The Reserve Bank of India maintained its benchmark repo rate at 6.5% for the eighth time, despite moderate inflation and stable food prices.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0081,
+          "probabilities": {
+            "entailment": 0.9878,
+            "neutral": 0.0043,
+            "contradiction": 0.0081
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Governor Shaktikanta Das emphasized that food price volatility continues to pose a risk.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0004,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.0012,
+            "contradiction": 0.0004
+          },
+          "retrieved_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk. The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "primary_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+      "word_count": 32,
+      "compression_ratio": 25.58,
+      "inference_time_sec": 2.54,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.9854,
+            "neutral": 0.0145,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "On Friday, the Reserve Bank of India maintained the benchmark repo rate at 6.5%, marking an eighth consecutive unchanged decision. This move was attributed to moderate headline inflation at 4.8%, despite ongoing concerns over food prices.",
+      "word_count": 36,
+      "compression_ratio": 16.28,
+      "inference_time_sec": 11.19,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "On Friday, the Reserve Bank of India maintained the benchmark repo rate at 6.5%, marking an eighth consecutive unchanged decision.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0035,
+          "probabilities": {
+            "entailment": 0.6968,
+            "neutral": 0.2998,
+            "contradiction": 0.0035
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "This move was attributed to moderate headline inflation at 4.8%, despite ongoing concerns over food prices.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0008,
+          "probabilities": {
+            "entailment": 0.939,
+            "neutral": 0.0603,
+            "contradiction": 0.0008
+          },
+          "retrieved_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk. The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "primary_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "1. **Main Event / Core Action:** The Reserve Bank of India kept the benchmark repo rate unchanged at 6.5%.\n   \n2. **Key Entities & Roles (Who performed the action vs who received it):**\n   - Who performed the action: The Reserve Bank of India\n   - Who received the action: Not specified\n   \n3. **Numbers & Metrics (Verbatim as written, do not alter):**\n   - Repo Rate: 6.5%\n   - Number of Monetary Policy Reviews: Eighth consecutive\n\n4. **Dates & Times (Verbatim as written, do not calculate or convert relative dates to calendar months):**\n   - Date: Friday\n   - Time: Not specified\n   \n5. **Negations & Constraints (What is NOT happening, rejected, or restricted):**\n   - No specific negations or constraints mentioned\n   \n6. **Status & Certainty (Completed vs Future target vs Proposal vs Uncertainty):**\n   - Completed event\n   \n7. **Attribution (Who announced or reported this):**\n   - Reported by the Reserve Bank of India, with reference to Governor Shaktikanta Das."
+    }
+  },
+  {
+    "id": "EN-02",
+    "lang": "english",
+    "title": "NexTech $450M Hub (Condition & Timeline)",
+    "source": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies. The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+    "elapsed_sec": 18.17,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "NexTech Corporation has committed to investing $450 million in a new semiconductor design facility in Bengaluru, with subsidies from the central government. Land acquisition is finalized, but commercial production is expected to start around early 2027.",
+      "word_count": 36,
+      "compression_ratio": 5.26,
+      "inference_time_sec": 2.04,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation has committed to investing $450 million in a new semiconductor design facility in Bengaluru, with subsidies from the central government.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0004,
+          "probabilities": {
+            "entailment": 0.9814,
+            "neutral": 0.018,
+            "contradiction": 0.0004
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Land acquisition is finalized, but commercial production is expected to start around early 2027.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0006,
+          "probabilities": {
+            "entailment": 0.9888,
+            "neutral": 0.0104,
+            "contradiction": 0.0006
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "NexTech Corporation has announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, with commercial production expected to begin early 2027 after receiving central government subsidies. Land acquisition for the project is currently complete.",
+      "word_count": 38,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 3.0,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation has announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, with commercial production expected to begin early 2027 after receiving central government subsidies.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0013,
+          "probabilities": {
+            "entailment": 0.0185,
+            "neutral": 0.9805,
+            "contradiction": 0.0013
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Land acquisition for the project is currently complete.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0003,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.0014,
+            "contradiction": 0.0003
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "NexTech Corporation has announced an investment of $450 million for a new semiconductor design facility in Bengaluru, contingent on receiving central government subsidies. The company's management noted that commercial production is expected to begin no earlier than early 2027.",
+      "word_count": 39,
+      "compression_ratio": -2.63,
+      "inference_time_sec": 10.86,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation has announced an investment of $450 million for a new semiconductor design facility in Bengaluru, contingent on receiving central government subsidies.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0057,
+          "probabilities": {
+            "entailment": 0.9526,
+            "neutral": 0.0417,
+            "contradiction": 0.0057
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The company's management noted that commercial production is expected to begin no earlier than early 2027.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0006,
+          "probabilities": {
+            "entailment": 0.9937,
+            "neutral": 0.0057,
+            "contradiction": 0.0006
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "1. **Main Event / Core Action:** NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru.\n   \n2. **Key Entities & Roles (Who performed the action vs who received it):**\n   - **Performers:** NexTech Corporation\n   - **Receivers:** Not specified\n   \n3. **Numbers & Metrics (Verbatim as written, do not alter):**\n   - Investment amount: $450 million\n   \n4. **Dates & Times (Verbatim as written, do not calculate or convert relative dates to calendar months):**\n   - Announcement date: Not specified\n   \n5. **Negations & Constraints (What is NOT happening, rejected, or restricted):**\n   - Commercial production will not commence before early 2027\n   \n6. **Status & Certainty (Completed vs Future target vs Proposal vs Uncertainty):**\n   - Status: Announced plan\n   - Certainty: Future target\n   \n7. **Attribution (Who announced or reported this):**\n   - NexTech Corporation"
+    }
+  },
+  {
+    "id": "EN-03",
+    "lang": "english",
+    "title": "Oxford Parkinson's Biomarker (Scientific Caution)",
+    "source": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+    "elapsed_sec": 17.85,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "Oxford University researchers discovered a blood marker for Parkinson's disease that can identify early signs up to seven years before symptoms appear. The finding requires further validation with larger, diverse patient groups before clinical use.",
+      "word_count": 35,
+      "compression_ratio": 25.53,
+      "inference_time_sec": 1.77,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Oxford University researchers discovered a blood marker for Parkinson's disease that can identify early signs up to seven years before symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0605,
+          "probabilities": {
+            "entailment": 0.9175,
+            "neutral": 0.0219,
+            "contradiction": 0.0605
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding requires further validation with larger, diverse patient groups before clinical use.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0414,
+          "probabilities": {
+            "entailment": 0.915,
+            "neutral": 0.0439,
+            "contradiction": 0.0414
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear. The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+      "word_count": 40,
+      "compression_ratio": 14.89,
+      "inference_time_sec": 2.91,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0096,
+          "probabilities": {
+            "entailment": 0.7646,
+            "neutral": 0.2258,
+            "contradiction": 0.0096
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0007,
+          "probabilities": {
+            "entailment": 0.9053,
+            "neutral": 0.0939,
+            "contradiction": 0.0007
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B2": {
+      "name": "Condition B2 (Two-Stage Factuality-Aware)",
+      "summary": "Medical researchers at Oxford University have discovered a blood biomarker that could identify early signs of Parkinson's disease up to seven years before symptoms appear. The finding is currently considered preliminary and requires additional testing on a broader scale before being used clinically.",
+      "word_count": 43,
+      "compression_ratio": 8.51,
+      "inference_time_sec": 12.45,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Medical researchers at Oxford University have discovered a blood biomarker that could identify early signs of Parkinson's disease up to seven years before symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0076,
+          "probabilities": {
+            "entailment": 0.7056,
+            "neutral": 0.2866,
+            "contradiction": 0.0076
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding is currently considered preliminary and requires additional testing on a broader scale before being used clinically.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.001,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "structured_facts": "1. **Main Event / Core Action:** Medical researchers at Oxford University have identified a blood biomarker.\n   \n2. **Key Entities & Roles (Who performed the action vs who received it):**\n   - Who performed the action: Medical researchers at Oxford University.\n   - Who received the action: Not specified in the given information.\n\n3. **Numbers & Metrics (Verbatim as written, do not alter):**\n   - The study found a blood biomarker that detects early signs of Parkinson's disease.\n   - The detection occurs up to seven years before clinical symptoms emerge.\n\n4. **Dates & Times (Verbatim as written, do not calculate or convert relative dates to calendar months):**\n   - No specific dates mentioned.\n\n5. **Negations & Constraints (What is NOT happening, rejected, or restricted):**\n   - The findings are described as \"preliminary.\"\n   - Validation across larger, diverse patient cohorts is required for clinical deployment.\n\n6. **Status & Certainty (Completed vs Future target vs Proposal vs Uncertainty):**\n   - The status is uncertain due to the need for further validation.\n\n7. **Attribution (Who announced or reported this):**\n   - The report was made by medical researchers at Oxford University."
+    }
+  }
+]

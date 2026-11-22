@@ -25,7 +25,8 @@ def verify_single_summary(
     extractor: ClaimExtractor,
     retriever: EvidenceRetriever,
     verifier: NLIVerifier,
-    top_k: int = 3,
+    top_k: int = 5,
+    min_similarity: float = 0.0,
 ):
     """Verifies all claims in a single summary against source_text."""
     claims = extractor.extract_claims(summary_text)
@@ -35,8 +36,10 @@ def verify_single_summary(
         claim_id = c["claim_id"]
         claim_text = c["claim_text"]
 
-        # Retrieve top-k evidence sentences
-        retrieved_units = retriever.retrieve(claim_text, source_text, genre=genre, top_k=top_k)
+        # Retrieve top-k evidence sentences with relevance filtering
+        retrieved_units = retriever.retrieve(
+            claim_text, source_text, genre=genre, top_k=top_k, min_similarity=min_similarity
+        )
         evidence_text = " ".join([r["sentence"] for r in retrieved_units])
         avg_retrieval_score = (
             round(sum([r["score"] for r in retrieved_units]) / len(retrieved_units), 4)
@@ -89,7 +92,9 @@ def run_verification_pipeline(
     output_detailed: Path,
     output_summary: Path,
     limit: int = None,
-    top_k: int = 3,
+    top_k: int = 5,
+    min_similarity: float = 0.0,
+    force: bool = False,
 ):
     print("\n" + "=" * 60)
     print("FACTINDIC - PHASE 4: VERIFICATION PIPELINE")
@@ -108,13 +113,37 @@ def run_verification_pipeline(
     if limit is not None and limit > 0:
         df = df.head(limit)
 
-    total_records = len(df)
-    print(f"\nVerifying {total_records} baseline summaries (Conditions A & B)...")
-
     detailed_rows = []
     summary_rows = []
+    completed_ids = set()
 
-    for idx, row in df.iterrows():
+    if not force and output_summary.exists():
+        try:
+            existing_sum = pd.read_csv(output_summary)
+            if "sample_id" in existing_sum.columns:
+                summary_rows = existing_sum.to_dict(orient="records")
+                completed_ids = set(existing_sum["sample_id"].dropna().unique())
+        except Exception:
+            pass
+
+    if output_detailed.exists():
+        try:
+            existing_det = pd.read_csv(output_detailed)
+            detailed_rows = existing_det.to_dict(orient="records")
+        except Exception:
+            pass
+
+    remaining_df = df[~df["sample_id"].isin(completed_ids)]
+    total_records = len(remaining_df)
+
+    if total_records == 0:
+        print(f"\nAll {len(df)} documents in {input_csv} already verified!")
+        sum_df = pd.DataFrame(summary_rows)
+        return
+
+    print(f"\nResuming Phase 4 Verification: {len(completed_ids)} already done, {total_records} new baseline summaries to audit...")
+
+    for idx, row in remaining_df.reset_index(drop=True).iterrows():
         sample_id = row["sample_id"]
         lang = row.get("language", "unknown")
         genre = row.get("genre", "news")
@@ -134,6 +163,7 @@ def run_verification_pipeline(
             retriever=retriever,
             verifier=verifier,
             top_k=top_k,
+            min_similarity=min_similarity,
         )
         for c in claims_a:
             c.update({
@@ -154,6 +184,7 @@ def run_verification_pipeline(
             retriever=retriever,
             verifier=verifier,
             top_k=top_k,
+            min_similarity=min_similarity,
         )
         for c in claims_b:
             c.update({
@@ -181,6 +212,10 @@ def run_verification_pipeline(
             "neutral_rate_B": stats_b["neutral_rate_pct"],
             "verified_at": datetime.now().isoformat(),
         })
+
+        # Incremental checkpoint save
+        pd.DataFrame(detailed_rows).to_csv(output_detailed, index=False, encoding="utf-8-sig")
+        pd.DataFrame(summary_rows).to_csv(output_summary, index=False, encoding="utf-8-sig")
 
     # Save outputs
     output_detailed.parent.mkdir(parents=True, exist_ok=True)
@@ -245,8 +280,19 @@ def main():
     parser.add_argument(
         "--top_k",
         type=int,
-        default=3,
+        default=5,
         help="Top-k evidence sentences to retrieve per claim",
+    )
+    parser.add_argument(
+        "--min_sim",
+        type=float,
+        default=0.0,
+        help="Relevance filtering threshold (default: 0.0)",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force re-verification of all samples, ignoring existing output files",
     )
 
     args = parser.parse_args()
@@ -256,6 +302,8 @@ def main():
         output_summary=args.output_summary,
         limit=args.limit,
         top_k=args.top_k,
+        min_similarity=args.min_sim,
+        force=args.force,
     )
 
 if __name__ == "__main__":

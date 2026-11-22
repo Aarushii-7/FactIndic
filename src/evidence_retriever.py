@@ -54,13 +54,13 @@ class EvidenceRetriever:
 
         print(f"Loading Evidence Retriever ({model_name}) on {self.device}...")
         try:
-            try:
             self.model = SentenceTransformer(model_name, device=self.device, local_files_only=True)
         except Exception:
-            self.model = SentenceTransformer(model_name, device=self.device)
-        except Exception:
-            self.device = "cpu"
-            self.model = SentenceTransformer(model_name, device="cpu")
+            try:
+                self.model = SentenceTransformer(model_name, device=self.device)
+            except Exception:
+                self.device = "cpu"
+                self.model = SentenceTransformer(model_name, device="cpu")
         print("Evidence Retriever ready!")
 
     def retrieve(
@@ -68,10 +68,13 @@ class EvidenceRetriever:
         claim: str,
         source_text: str,
         genre: str = "news",
-        top_k: int = 3,
+        top_k: int = 5,
+        min_similarity: float = 0.0,
     ) -> List[Dict[str, Any]]:
         """
         Retrieves the top-k most similar sentences/turns from source_text for the given claim.
+        Applies relevance filtering: prunes sentences with similarity < min_similarity,
+        while always guaranteeing at least the top-1 sentence as an anchor.
         Returns a list of dicts: [{"sentence": str, "score": float, "rank": int}]
         """
         units = split_source_into_units(source_text, genre=genre)
@@ -94,5 +97,11 @@ class EvidenceRetriever:
                 "sentence": units[idx.item()],
                 "score": round(score.item(), 4),
             })
+
+        # Strategy 3: Relevance filtering (prune sentences below min_similarity)
+        if min_similarity is not None and min_similarity > 0.0:
+            filtered = [r for r in retrieved if r["score"] >= min_similarity]
+            # Safeguard: always retain at least the single best sentence (top-1) as anchor
+            return filtered if filtered else [retrieved[0]]
 
         return retrieved

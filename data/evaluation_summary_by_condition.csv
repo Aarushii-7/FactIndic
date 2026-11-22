@@ -1,4 +1,0 @@
-﻿Condition,Precision,Recall,F1-Score,Average Summary Length,Compression Ratio (%),Inference Time (s),Factual Support (%),Contradiction (%)
-Condition A (Standard),0.3107,0.2844,0.2535,52.4,27.47,21.88,52.5,14.58
-Condition B (Factuality-Aware),0.2292,0.2468,0.1951,59.1,27.8,40.29,66.11,12.5
-Condition C (Revision Loop),0.2104,0.2732,0.2126,56.0,27.79,49.04,67.99,9.1

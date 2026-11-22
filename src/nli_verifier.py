@@ -46,7 +46,7 @@ class NLIVerifier:
 
     def verify(self, premise: str, hypothesis: str) -> Dict[str, Any]:
         """
-        Runs NLI inference on (premise, hypothesis).
+        Runs NLI inference on (premise, hypothesis) using calibrated decision thresholds.
         Returns:
             {
                 "label": "entailment" | "contradiction" | "neutral",
@@ -54,6 +54,17 @@ class NLIVerifier:
                 "probabilities": {"entailment": p1, "neutral": p2, "contradiction": p3}
             }
         """
+        premise = str(premise).strip()
+        hypothesis = str(hypothesis).strip()
+
+        # Handle empty/missing premise safely
+        if not premise or not hypothesis:
+            return {
+                "label": "neutral",
+                "confidence": 1.0,
+                "probabilities": {"entailment": 0.0, "neutral": 1.0, "contradiction": 0.0},
+            }
+
         inputs = self.tokenizer(
             premise,
             hypothesis,
@@ -71,9 +82,23 @@ class NLIVerifier:
             for i in range(len(probs))
         }
 
-        # Predict top class
-        best_label = max(prob_dict, key=prob_dict.get)
-        confidence = prob_dict[best_label]
+        p_ent = prob_dict.get("entailment", 0.0)
+        p_neu = prob_dict.get("neutral", 0.0)
+        p_con = prob_dict.get("contradiction", 0.0)
+
+        # Calibrated decision rules:
+        # 1. Contradiction: If contradiction is prominent or exceeds entailment
+        if p_con >= 0.45 or (p_con > p_ent and p_con >= 0.35):
+            best_label = "contradiction"
+            confidence = p_con
+        # 2. Strict Entailment: requires robust confidence without substantial neutral uncertainty
+        elif p_ent >= 0.65 and p_ent > p_neu + 0.10:
+            best_label = "entailment"
+            confidence = p_ent
+        # 3. Neutral: Evidence is insufficient or does not firmly establish the claim
+        else:
+            best_label = "neutral"
+            confidence = p_neu if p_neu >= p_ent else round(1.0 - p_ent, 4)
 
         return {
             "label": best_label,

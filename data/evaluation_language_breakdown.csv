@@ -1,4 +1,0 @@
-﻿Language,Samples,Precision,Recall,F1-Score,Average Summary Length,Compression Ratio (%),Inference Time (s),Support Rate (%),Contradiction Rate (%)
-ENGLISH,5,0.2074,0.4033,0.2723,74.4,22.29,13.95,72.33,3.33
-HINDI,8,0.1583,0.1059,0.1062,59.1,15.5,96.66,57.78,18.4
-HINGLISH,5,0.2968,0.4109,0.3232,32.6,52.97,7.94,80.0,0.0

@@ -1,0 +1,1136 @@
+[
+  {
+    "id": "HI-01",
+    "category": "News Report (Science & Tech)",
+    "language": "hindi",
+    "source": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+    "elapsed_total": 33.85,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+      "word_count": 47,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 10.68,
+      "support_rate": 66.67,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 33.33,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0834,
+          "probabilities": {
+            "entailment": 0.5381,
+            "neutral": 0.3787,
+            "contradiction": 0.0834
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9707,
+            "neutral": 0.0184,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "primary_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0051,
+          "probabilities": {
+            "entailment": 0.9297,
+            "neutral": 0.0651,
+            "contradiction": 0.0051
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+      "word_count": 46,
+      "compression_ratio": 2.13,
+      "inference_time_sec": 12.0,
+      "support_rate": 66.67,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 33.33,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह लॉन्च किया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0675,
+          "probabilities": {
+            "entailment": 0.5874,
+            "neutral": 0.3452,
+            "contradiction": 0.0675
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9707,
+            "neutral": 0.0184,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "primary_evidence": "वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0051,
+          "probabilities": {
+            "entailment": 0.9297,
+            "neutral": 0.0651,
+            "contradiction": 0.0051
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+      "word_count": 42,
+      "compression_ratio": 10.64,
+      "inference_time_sec": 15.88,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0834,
+          "probabilities": {
+            "entailment": 0.0389,
+            "neutral": 0.8774,
+            "contradiction": 0.0834
+          },
+          "retrieved_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया। वैज्ञानिकों ने इस मिशन को ऐतिहासिक सफलता बताया। यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "primary_evidence": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0051,
+          "probabilities": {
+            "entailment": 0.9297,
+            "neutral": 0.0651,
+            "contradiction": 0.0051
+          },
+          "retrieved_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा। भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) ने श्रीहरिकोटा के सतीश धवन अंतरिक्ष केंद्र से एक नया संचार उपग्रह सफलतापूर्वक लॉन्च किया।",
+          "primary_evidence": "यह उपग्रह अगले 10 वर्षों तक देश के दूरदराज के क्षेत्रों में हाई-स्पीड इंटरनेट और दूरसंचार सेवाएं प्रदान करेगा।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": true,
+      "revised_count": 1
+    }
+  },
+  {
+    "id": "HI-02",
+    "category": "Government & Numerical Announcement",
+    "language": "hindi",
+    "source": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+    "elapsed_total": 21.0,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "वित्त मंत्रालय ने वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 39,
+      "compression_ratio": 13.33,
+      "inference_time_sec": 7.39,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0111,
+          "probabilities": {
+            "entailment": 0.9365,
+            "neutral": 0.0525,
+            "contradiction": 0.0111
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 40,
+      "compression_ratio": 11.11,
+      "inference_time_sec": 9.88,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0164,
+          "probabilities": {
+            "entailment": 0.918,
+            "neutral": 0.0654,
+            "contradiction": 0.0164
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+      "word_count": 40,
+      "compression_ratio": 11.11,
+      "inference_time_sec": 13.15,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "वित्त मंत्रालय ने वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0164,
+          "probabilities": {
+            "entailment": 0.918,
+            "neutral": 0.0654,
+            "contradiction": 0.0164
+          },
+          "retrieved_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है। हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "primary_evidence": "वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.085,
+          "probabilities": {
+            "entailment": 0.5713,
+            "neutral": 0.3435,
+            "contradiction": 0.085
+          },
+          "retrieved_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे। वित्त मंत्रालय ने शुक्रवार को घोषणा की कि वित्त वर्ष 2024-25 में कुल सकल GST संग्रह ₹20.18 लाख करोड़ तक पहुंच गया, जो पिछले वर्ष के ₹18.10 लाख करोड़ से 11.5 प्रतिशत अधिक है।",
+          "primary_evidence": "हालांकि, अंतिम लेखापरीक्षित आंकड़े 31 मार्च के बाद जारी किए जाएंगे।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ],
+      "revised_from_B": true,
+      "revised_count": 1
+    }
+  },
+  {
+    "id": "HI-03",
+    "category": "Health Advisory (Uncertainty & Attribution)",
+    "language": "hindi",
+    "source": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+    "elapsed_total": 30.4,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+      "word_count": 59,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 11.64,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0616,
+          "probabilities": {
+            "entailment": 0.7563,
+            "neutral": 0.182,
+            "contradiction": 0.0616
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0632,
+          "probabilities": {
+            "entailment": 0.5762,
+            "neutral": 0.3606,
+            "contradiction": 0.0632
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+      "word_count": 59,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 14.16,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0616,
+          "probabilities": {
+            "entailment": 0.7563,
+            "neutral": 0.182,
+            "contradiction": 0.0616
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0632,
+          "probabilities": {
+            "entailment": 0.5762,
+            "neutral": 0.3606,
+            "contradiction": 0.0632
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है। अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी",
+      "word_count": 45,
+      "compression_ratio": 23.73,
+      "inference_time_sec": 18.2,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0616,
+          "probabilities": {
+            "entailment": 0.7563,
+            "neutral": 0.182,
+            "contradiction": 0.0616
+          },
+          "retrieved_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "primary_evidence": "स्वास्थ्य विभाग ने चेतावनी दी है कि सर्दियों के दौरान मौसमी इन्फ्लूएंजा के मामलों में वृद्धि होने की संभावना है, हालांकि किसी नए घातक वेरिएंट की पुष्टि नहीं हुई है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी।",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0298,
+          "probabilities": {
+            "entailment": 0.856,
+            "neutral": 0.1141,
+            "contradiction": 0.0298
+          },
+          "retrieved_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "primary_evidence": "अधिकारियों ने वरिष्ठ नागरिकों को सावधानी बरतने और भीड़भाड़ में मास्क पहनने की सलाह दी है, परंतु किसी प्रकार का लॉकडाउन या यात्रा प्रतिबंध लागू नहीं किया गया है।",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": true,
+      "revised_count": 1
+    }
+  },
+  {
+    "id": "HG-01",
+    "category": "Dialogue (Speaker/Listener Directionality)",
+    "language": "hinglish",
+    "source": "Aarav: Maine Rishabh ko kal subah school jane ke liye bola tha. Sneha: Acha, to wo gaya kya? Aarav: Nahi, usne bola ki kal Math ka test nahi hai isliye wo nahi jayega.",
+    "elapsed_total": 5.89,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "Aarav told Rishabh he would go to school with him this morning because Sneha said there was no math test today so Rishabh wouldn't come.",
+      "word_count": 25,
+      "compression_ratio": 24.24,
+      "inference_time_sec": 1.55,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Aarav told Rishabh he would go to school with him this morning because Sneha said there was no math test today so Rishabh wouldn't come.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0228,
+          "probabilities": {
+            "entailment": 0.0681,
+            "neutral": 0.9092,
+            "contradiction": 0.0228
+          },
+          "retrieved_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha. v: Nahi, usne bola ki kal Math ka test nahi hai isliye wo nahi jayega. a: Acha, to wo gaya kya?",
+          "primary_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "Aarav told Rishabh that he would go to school at night because Sneha confirmed that there wasn't going to be a math test that day, so Rishabh wouldn't come.",
+      "word_count": 29,
+      "compression_ratio": 12.12,
+      "inference_time_sec": 2.09,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Aarav told Rishabh that he would go to school at night because Sneha confirmed that there wasn't going to be a math test that day, so Rishabh wouldn't come.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0029,
+          "probabilities": {
+            "entailment": 0.0383,
+            "neutral": 0.959,
+            "contradiction": 0.0029
+          },
+          "retrieved_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha. v: Nahi, usne bola ki kal Math ka test nahi hai isliye wo nahi jayega. a: Acha, to wo gaya kya?",
+          "primary_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "Aarav told Rishabh that he would go to school at night because Sneha confirmed that there wasn't going to be a math test that day, so Rishabh wouldn't come.",
+      "word_count": 29,
+      "compression_ratio": 12.12,
+      "inference_time_sec": 4.09,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Aarav told Rishabh that he would go to school at night because Sneha confirmed that there wasn't going to be a math test that day, so Rishabh wouldn't come.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0029,
+          "probabilities": {
+            "entailment": 0.0383,
+            "neutral": 0.959,
+            "contradiction": 0.0029
+          },
+          "retrieved_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha. v: Nahi, usne bola ki kal Math ka test nahi hai isliye wo nahi jayega. a: Acha, to wo gaya kya?",
+          "primary_evidence": "v: Maine Rishabh ko kal subah school jane ke liye bola tha.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ],
+      "revised_from_B": true,
+      "revised_count": 1
+    }
+  },
+  {
+    "id": "HG-02",
+    "category": "Dialogue (Negation & Venue Change)",
+    "language": "hinglish",
+    "source": "Karan: Guys kal subah 10 baje college auditorium mein placement talk hai. Simran: Par sunne mein aaya tha ki placement drive cancel ho gaya hai? Karan: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai.",
+    "elapsed_total": 3.03,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "The conversation discusses a scheduled job fair at a college auditorium being canceled due to changes in venue from a seminar hall to an auditorium.",
+      "word_count": 25,
+      "compression_ratio": 44.44,
+      "inference_time_sec": 1.36,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The conversation discusses a scheduled job fair at a college auditorium being canceled due to changes in venue from a seminar hall to an auditorium.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.1639,
+          "probabilities": {
+            "entailment": 0.6152,
+            "neutral": 0.2208,
+            "contradiction": 0.1639
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+      "word_count": 22,
+      "compression_ratio": 51.11,
+      "inference_time_sec": 1.54,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.156,
+          "probabilities": {
+            "entailment": 0.8271,
+            "neutral": 0.0169,
+            "contradiction": 0.156
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+      "word_count": 22,
+      "compression_ratio": 51.11,
+      "inference_time_sec": 1.54,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The conversation discusses a scheduled job fair at a college auditorium that has been canceled but changed to a different location instead.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.156,
+          "probabilities": {
+            "entailment": 0.8271,
+            "neutral": 0.0169,
+            "contradiction": 0.156
+          },
+          "retrieved_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai. n: Nahi, drive cancel nahi hua hai, bas venue change ho gaya hai pehle seminar hall tha ab auditorium hai. n: Par sunne mein aaya tha ki placement drive cancel ho gaya hai?",
+          "primary_evidence": "n: Guys kal subah 10 baje college auditorium mein placement talk hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": false,
+      "revised_count": 0
+    }
+  },
+  {
+    "id": "HG-03",
+    "category": "Code-Mixed Academic (Intention vs. Outcome)",
+    "language": "hinglish",
+    "source": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+    "elapsed_total": 2.74,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "Students struggle with balancing their daily study schedules while missing important assignment deadlines due to conflicting class and project times.",
+      "word_count": 20,
+      "compression_ratio": 31.03,
+      "inference_time_sec": 1.06,
+      "support_rate": 0.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 100.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Students struggle with balancing their daily study schedules while missing important assignment deadlines due to conflicting class and project times.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0018,
+          "probabilities": {
+            "entailment": 0.2617,
+            "neutral": 0.7363,
+            "contradiction": 0.0018
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+      "word_count": 22,
+      "compression_ratio": 24.14,
+      "inference_time_sec": 1.55,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.998,
+            "neutral": 0.0019,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+      "word_count": 22,
+      "compression_ratio": 24.14,
+      "inference_time_sec": 1.55,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Despite many students planning their daily study schedules to avoid missing important assignments, managing class and project deadlines can be very challenging.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.998,
+            "neutral": 0.0019,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "primary_evidence": "Many students apna daily study schedule plan karte hain taaki important assignment deadlines miss na ho. Lekin classes aur projects ke beech time manage karna kaafi challenging hota hai.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": false,
+      "revised_count": 0
+    }
+  },
+  {
+    "id": "EN-01",
+    "category": "Economic Report (Numerical Data)",
+    "language": "english",
+    "source": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+    "elapsed_total": 4.42,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "The Reserve Bank of India maintained its benchmark repo rate at 6.5% for the eighth time, despite moderate inflation and stable food prices. Governor Shaktikanta Das emphasized that food price volatility continues to pose a risk.",
+      "word_count": 36,
+      "compression_ratio": 16.28,
+      "inference_time_sec": 1.89,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "The Reserve Bank of India maintained its benchmark repo rate at 6.5% for the eighth time, despite moderate inflation and stable food prices.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0081,
+          "probabilities": {
+            "entailment": 0.9878,
+            "neutral": 0.0043,
+            "contradiction": 0.0081
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Governor Shaktikanta Das emphasized that food price volatility continues to pose a risk.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0004,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.0012,
+            "contradiction": 0.0004
+          },
+          "retrieved_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk. The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "primary_evidence": "Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+      "word_count": 32,
+      "compression_ratio": 25.58,
+      "inference_time_sec": 2.29,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.9854,
+            "neutral": 0.0145,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+      "word_count": 32,
+      "compression_ratio": 25.58,
+      "inference_time_sec": 2.29,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "On Friday, the Reserve Bank of India maintained its benchmark repo rate at 6.5% for an eighth consecutive time as headline inflation has stabilized at 4.8%, but concerns over food prices persist.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0002,
+          "probabilities": {
+            "entailment": 0.9854,
+            "neutral": 0.0145,
+            "contradiction": 0.0002
+          },
+          "retrieved_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review. Governor Shaktikanta Das stated that while headline inflation has moderated to 4.8 percent, food price volatility remains a significant risk.",
+          "primary_evidence": "The Reserve Bank of India on Friday kept the benchmark repo rate unchanged at 6.5 percent for the eighth consecutive monetary policy review.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": false,
+      "revised_count": 0
+    }
+  },
+  {
+    "id": "EN-02",
+    "category": "Corporate Announcement (Timeline & Conditions)",
+    "language": "english",
+    "source": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies. The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+    "elapsed_total": 6.58,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "NexTech Corporation has committed to investing $450 million in a new semiconductor design facility in Bengaluru, with subsidies from the central government. Land acquisition is finalized, but commercial production is expected to start around early 2027.",
+      "word_count": 36,
+      "compression_ratio": 5.26,
+      "inference_time_sec": 1.97,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation has committed to investing $450 million in a new semiconductor design facility in Bengaluru, with subsidies from the central government.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0004,
+          "probabilities": {
+            "entailment": 0.9814,
+            "neutral": 0.018,
+            "contradiction": 0.0004
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Land acquisition is finalized, but commercial production is expected to start around early 2027.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0006,
+          "probabilities": {
+            "entailment": 0.9888,
+            "neutral": 0.0104,
+            "contradiction": 0.0006
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "NexTech Corporation has announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, with commercial production expected to begin early 2027 after receiving central government subsidies. Land acquisition for the project is currently complete.",
+      "word_count": 38,
+      "compression_ratio": 0.0,
+      "inference_time_sec": 2.64,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation has announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, with commercial production expected to begin early 2027 after receiving central government subsidies.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0013,
+          "probabilities": {
+            "entailment": 0.0185,
+            "neutral": 0.9805,
+            "contradiction": 0.0013
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Land acquisition for the project is currently complete.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0003,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.0014,
+            "contradiction": 0.0003
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies. Land acquisition for the project is currently complete.",
+      "word_count": 29,
+      "compression_ratio": 23.68,
+      "inference_time_sec": 4.23,
+      "support_rate": 50.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 50.0,
+      "accepted": false,
+      "status": "REVISE_FLAGGED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "label": "neutral",
+          "nli_label": "neutral",
+          "prob_contradiction": 0.0377,
+          "probabilities": {
+            "entailment": 0.5635,
+            "neutral": 0.3989,
+            "contradiction": 0.0377
+          },
+          "retrieved_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "primary_evidence": "NexTech Corporation announced plans to invest $450 million in a new semiconductor design facility in Bengaluru, subject to central government subsidies.",
+          "explanation": "The claim could not be sufficiently verified from retrieved evidence (neutral / ungrounded)."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "Land acquisition for the project is currently complete.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0003,
+          "probabilities": {
+            "entailment": 0.9985,
+            "neutral": 0.0014,
+            "contradiction": 0.0003
+          },
+          "retrieved_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "primary_evidence": "The management clarified that while land acquisition is complete, commercial production will not commence before early 2027.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": true,
+      "revised_count": 1
+    }
+  },
+  {
+    "id": "EN-03",
+    "category": "Scientific Research (Uncertainty & Caution)",
+    "language": "english",
+    "source": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+    "elapsed_total": 4.49,
+    "condition_A": {
+      "name": "Condition A (Standard)",
+      "summary": "Oxford University researchers discovered a blood marker for Parkinson's disease that can identify early signs up to seven years before symptoms appear. The finding requires further validation with larger, diverse patient groups before clinical use.",
+      "word_count": 35,
+      "compression_ratio": 25.53,
+      "inference_time_sec": 1.71,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Oxford University researchers discovered a blood marker for Parkinson's disease that can identify early signs up to seven years before symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0605,
+          "probabilities": {
+            "entailment": 0.9175,
+            "neutral": 0.0219,
+            "contradiction": 0.0605
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding requires further validation with larger, diverse patient groups before clinical use.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0414,
+          "probabilities": {
+            "entailment": 0.915,
+            "neutral": 0.0439,
+            "contradiction": 0.0414
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_B": {
+      "name": "Condition B (Factuality-Aware)",
+      "summary": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear. The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+      "word_count": 40,
+      "compression_ratio": 14.89,
+      "inference_time_sec": 2.48,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0096,
+          "probabilities": {
+            "entailment": 0.7646,
+            "neutral": 0.2258,
+            "contradiction": 0.0096
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0007,
+          "probabilities": {
+            "entailment": 0.9053,
+            "neutral": 0.0939,
+            "contradiction": 0.0007
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ]
+    },
+    "condition_C": {
+      "name": "Condition C (Targeted Revision Loop)",
+      "summary": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear. The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+      "word_count": 40,
+      "compression_ratio": 14.89,
+      "inference_time_sec": 2.48,
+      "support_rate": 100.0,
+      "contradiction_rate": 0.0,
+      "neutral_rate": 0.0,
+      "accepted": true,
+      "status": "ACCEPTED",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "claim_text": "Oxford University medical researchers discovered a blood biomarker that could detect early signs of Parkinson's disease up to seven years before clinical symptoms appear.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0096,
+          "probabilities": {
+            "entailment": 0.7646,
+            "neutral": 0.2258,
+            "contradiction": 0.0096
+          },
+          "retrieved_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge. However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "primary_evidence": "Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "The finding is promising but requires further validation through larger, diverse patient studies before clinical application.",
+          "label": "entailment",
+          "nli_label": "entailment",
+          "prob_contradiction": 0.0007,
+          "probabilities": {
+            "entailment": 0.9053,
+            "neutral": 0.0939,
+            "contradiction": 0.0007
+          },
+          "retrieved_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment. Medical researchers at Oxford University have identified a blood biomarker that may detect early signs of Parkinson's disease up to seven years before clinical symptoms emerge.",
+          "primary_evidence": "However, the study authors emphasized that the findings are preliminary and require validation across larger, diverse patient cohorts before clinical deployment.",
+          "explanation": "The source directly confirms the reported event, entities, and actions."
+        }
+      ],
+      "revised_from_B": false,
+      "revised_count": 0
+    }
+  }
+]

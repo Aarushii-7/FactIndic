@@ -5,7 +5,7 @@ FactIndic - Phase 5: Condition C (NLI-Guided Targeted Revision Loop) Runner
 Implements the 3 critical implementation decisions:
 1. High-confidence contradiction thresholding (prob_contradiction >= threshold).
 2. Explicit handling of zero-claim edge cases.
-3. Full re-verification after each revision attempt, bounded to a maximum of 2 attempts,
+3. Full re-verification after each revision attempt, bounded to a maximum of 1 attempt,
    terminating revisions automatically when summaries cannot be resolved within bounds.
 """
 
@@ -27,14 +27,23 @@ from src.revision import TargetedReviser
 def load_qwen_pipe(model_id: str = "Qwen/Qwen2.5-1.5B-Instruct"):
     device = "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"\nLoading local Qwen model ({model_id}) on {device} for targeted revision...")
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_id, local_files_only=True)
+    except Exception:
+        tokenizer = AutoTokenizer.from_pretrained(model_id)
     dtype = torch.float16 if device in ["mps", "cuda"] else torch.float32
     try:
-        model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
+        try:
+            model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype, local_files_only=True)
+        except Exception:
+            model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
         model.to(torch.device(device))
     except Exception:
         device = "cpu"
-        model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float32)
+        try:
+            model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float32, local_files_only=True)
+        except Exception:
+            model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float32)
         model.to(torch.device("cpu"))
     model.eval()
 
@@ -53,7 +62,8 @@ def verify_summary(
     retriever: EvidenceRetriever,
     verifier: NLIVerifier,
     policy: AcceptancePolicy,
-    top_k: int = 3,
+    top_k: int = 5,
+    min_similarity: float = 0.0,
 ):
     """Audits all claims in a summary and evaluates acceptance criteria."""
     claims = extractor.extract_claims(summary_text)
@@ -68,7 +78,9 @@ def verify_summary(
         cid = c["claim_id"]
         ctext = c["claim_text"]
 
-        retrieved = retriever.retrieve(ctext, source_text, genre=genre, top_k=top_k)
+        retrieved = retriever.retrieve(
+            ctext, source_text, genre=genre, top_k=top_k, min_similarity=min_similarity
+        )
         evidence_text = " ".join([r["sentence"] for r in retrieved])
         avg_sim = (
             round(sum([r["score"] for r in retrieved]) / len(retrieved), 4)
@@ -97,8 +109,11 @@ def run_condition_c(
     output_final_csv: Path,
     output_audit_csv: Path,
     limit: int = None,
-    max_revisions: int = 2,
+    max_revisions: int = 1,
     high_conf_thresh: float = 0.70,
+    top_k: int = 5,
+    min_similarity: float = 0.0,
+    force: bool = False,
 ):
     print("=" * 65)
     print("FACTINDIC - PHASE 5: CONDITION C (TARGETED REVISION LOOP)")
@@ -120,13 +135,34 @@ def run_condition_c(
     if limit is not None and limit > 0:
         df = df.head(limit)
 
-    total = len(df)
     final_records = []
     audit_trail = []
+    completed_ids = set()
+    if not force and output_final_csv.exists():
+        try:
+            existing_final = pd.read_csv(output_final_csv)
+            if "sample_id" in existing_final.columns:
+                final_records = existing_final.to_dict(orient="records")
+                completed_ids = set(existing_final["sample_id"].dropna().unique())
+        except Exception:
+            pass
+    if output_audit_csv.exists():
+        try:
+            existing_audit = pd.read_csv(output_audit_csv)
+            audit_trail = existing_audit.to_dict(orient="records")
+        except Exception:
+            pass
 
-    print(f"\nProcessing {total} documents through Condition C Pipeline...")
+    remaining_df = df[~df["sample_id"].isin(completed_ids)]
+    total = len(remaining_df)
 
-    for idx, row in df.iterrows():
+    if total == 0:
+        print(f"\nAll {len(df)} documents in {input_csv} already processed in Condition C!")
+        return
+
+    print(f"\nResuming Condition C: {len(completed_ids)} already done, {total} new documents to process...")
+
+    for idx, row in remaining_df.reset_index(drop=True).iterrows():
         sample_id = row["sample_id"]
         lang = row.get("language", "unknown")
         genre = row.get("genre", "news")
@@ -150,6 +186,8 @@ def run_condition_c(
                 retriever=retriever,
                 verifier=verifier,
                 policy=policy,
+                top_k=top_k,
+                min_similarity=min_similarity,
             )
 
             if attempt == 0:
@@ -185,14 +223,10 @@ def run_condition_c(
                 graph = ClaimGraph(claims)
                 related_info = graph.get_related_claims(flagged_ids)
 
-                print(f"   -> Revision #{attempt}: Revising {len(flagged_ids)} flagged claim(s) + {len(related_info['dependent_ids'])} dependent claim(s)...")
+                print(f"   -> Revision #{attempt}: In-place revision of {len(flagged_ids)} problematic claim(s) (preserving entailed claims)...")
 
-                # Generate revised summary
-                current_summary = reviser.revise(
-                    source_text=source_text,
-                    current_summary=current_summary,
-                    graph_context=related_info,
-                )
+                # Generate revised summary via surgical claim-level in-place replacement
+                current_summary = reviser.revise_in_place(claims)
             else:
                 # Decision 3: Max revision attempts reached
                 status = "UNRESOLVED_FLAGGED"
@@ -215,6 +249,10 @@ def run_condition_c(
             "final_contra_rate": eval_res["contradiction_rate"],
             "completed_at": datetime.now().isoformat(),
         })
+
+        # Incremental checkpoint save
+        pd.DataFrame(final_records).to_csv(output_final_csv, index=False, encoding="utf-8-sig")
+        pd.DataFrame(audit_trail).to_csv(output_audit_csv, index=False, encoding="utf-8-sig")
 
     # Save outputs
     output_final_csv.parent.mkdir(parents=True, exist_ok=True)
@@ -249,9 +287,12 @@ def main():
     parser.add_argument("--input", type=Path, default=Path("data/summaries_baseline_A_B.csv"))
     parser.add_argument("--output_final", type=Path, default=Path("data/condition_c_final_summaries.csv"))
     parser.add_argument("--output_audit", type=Path, default=Path("data/revision_audit_trail.csv"))
-    parser.add_argument("--limit", type=int, default=5, help="Number of documents to run through revision (default: 5)")
-    parser.add_argument("--max_revisions", type=int, default=2, help="Max revision attempts (default: 2)")
+    parser.add_argument("--limit", type=int, default=None, help="Number of documents to run through revision (default: all)")
+    parser.add_argument("--max_revisions", type=int, default=1, help="Max revision attempts (default: 1)")
     parser.add_argument("--high_conf_thresh", type=float, default=0.70, help="Confidence threshold for high-confidence contradiction")
+    parser.add_argument("--top_k", type=int, default=5, help="Top-k evidence sentences to retrieve per claim (default: 5)")
+    parser.add_argument("--min_sim", type=float, default=0.0, help="Relevance filtering threshold (default: 0.0)")
+    parser.add_argument("--force", action="store_true", help="Force re-running revision on all samples, ignoring existing output files")
 
     args = parser.parse_args()
     run_condition_c(
@@ -261,6 +302,9 @@ def main():
         limit=args.limit,
         max_revisions=args.max_revisions,
         high_conf_thresh=args.high_conf_thresh,
+        top_k=args.top_k,
+        min_similarity=args.min_sim,
+        force=args.force,
     )
 
 if __name__ == "__main__":

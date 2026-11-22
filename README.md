@@ -5,7 +5,7 @@
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Transformers-yellow.svg)](https://huggingface.co/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
-FactIndic is an end-to-end factuality-aware summarization and verification system for Indic languages (Hindi), English, and Indic-English code-mixed text (Hinglish). It investigates whether **NLI-guided, dependency-aware targeted revision (Condition C)** can detect and correct hallucinations compared to standard prompting alone (**Condition A**) and factuality-aware prompting (**Condition B**).
+**FactIndic** is an end-to-end factuality-aware summarization and verification system for Indic languages (**Hindi**), English (**English**), and Indic-English code-mixed text (**Hinglish**). It investigates whether **NLI-guided targeted claim revision (Condition C)** can detect and correct factual hallucinations compared to standard prompting alone (**Condition A**) and precision factuality prompting (**Condition B**).
 
 ---
 
@@ -14,7 +14,7 @@ FactIndic is an end-to-end factuality-aware summarization and verification syste
 ```
                                 [Input Documents]
                                        │
-                         [Unified Dataset Standardization]
+                         [500-Sample Balanced Dataset]
                                        │
                       ┌────────────────┴────────────────┐
                       ▼                                 ▼
@@ -34,92 +34,80 @@ FactIndic is an end-to-end factuality-aware summarization and verification syste
                     ┌──────────────────┴──────────────────┐
                     ▼                                     ▼
            Meets 3 Criteria?                   Fails Policy Criteria?
-             [✓ ACCEPTED]                                 │
-                                                [5. Claim Graph (Approach C)]
-                                                (NetworkX Entity Dependencies)
-                                                          │
-                                                [6. Targeted Revision (S1/S2)]
-                                                (Local Qwen / Gemini with Evidence)
-                                                          │
-                                                [7. Full Re-Verification]
-                                                          │
-                                            ┌─────────────┴─────────────┐
-                                            ▼                           ▼
-                                    [✓ ACCEPTED]              [✗ Flagged for Human Review]
-                                                             (Max 2 attempts reached)
+             [✓ ACCEPTED]                                │
+                                               [5. In-Place Targeted Revision]
+                                               (Evidence-Constrained Claim Edit)
+                                                         │
+                                               [6. Full Re-Verification (S1)]
+                                                         │
+                                           ┌─────────────┴─────────────┐
+                                           ▼                           ▼
+                                   [✓ ACCEPTED (S1)]         [✗ Flagged for Review]
 ```
 
 ---
 
 ## Three Experimental Conditions
 
-1. **Condition A (Standard Prompt, No Revision)**: Standard concise summarization instruction.
-2. **Condition B (Factuality-Aware Prompt, No Revision)**: Explicit instructions restricting output to source-supported facts, preserving named entities, numbers, and dates.
-3. **Condition C (Targeted Revision Loop with Claim Graph)**: NLI-guided targeted revision of problematic claim clusters using source evidence, bounded to a maximum of two revision attempts ($S_0 \rightarrow S_1 \rightarrow S_2$).
+1. **Condition A (Standard Prompt, No Revision)**: Standard concise summarization instruction with identical language preservation directives.
+2. **Condition B (Factuality-Aware Prompt, No Revision)**: Language-adaptive positive constraints:
+   - **Hindi:** Devanagari 9-rule prompt enforcing entity/negation accuracy and brevity (2–3 sentences).
+   - **Hinglish (H2E):** Dialogue-to-English translation and summarization prompt.
+   - **English:** Structural 2-sentence format prioritizing primary events and aggregate numerical figures over granular breakdowns.
+3. **Condition C (Targeted Revision Loop)**: NLI-guided targeted revision of problematic claims using retrieved evidence sentences, bounded to a single revision attempt ($S_0 \rightarrow S_1$).
 
 ---
 
 ## Acceptance Policy & Decision Rules
 
-A summary is automatically accepted **only** if all three criteria are satisfied:
+A summary is automatically accepted **only** if all criteria are satisfied:
 1. **Factual Support Rate $\ge 90\%$** ($\text{Entailment} / \text{Total Claims} \times 100$)
 2. **Contradiction Rate $\le 5\%$** ($\text{Contradiction} / \text{Total Claims} \times 100$)
 3. **No High-Confidence Contradictions** ($\text{prob}_{\text{contradiction}} < 0.70$)
 4. **Non-Zero Claims**: If zero claims are extracted, support rate is undefined; the summary is rejected.
 
-Summaries failing any criterion enter the **Targeted Revision Loop**. Summaries remaining unresolved after two iterations are marked as `UNRESOLVED_FLAGGED` and terminated automatically by policy.
+Summaries failing any criterion enter the **Targeted Revision Loop**. Unresolved summaries after revision are marked as `UNRESOLVED_FLAGGED` and terminated automatically by policy.
 
 ---
 
-## Repository Structure
+## Clean Repository Structure
 
 ```
 factIndic/
-├── README.md                           # Comprehensive documentation & execution guide
+├── README.md                           # Documentation & benchmark report
 ├── requirements.txt                    # Pinned Python dependencies
-├── DATASET_INVENTORY.md                # Dataset provenance and candidate statistics
-├── dataset_inspection.py               # Downloads and filters ILSUM 2.0
-├── select_ilsum_samples.py             # Deterministically samples 150 Hindi & 150 English
-├── select_gupshup_samples.py           # Deterministically samples 200 Hinglish validation pairs
-├── create_unified_candidates.py        # Normalizes 500 samples into single schema
-├── generate_summaries_local.py         # Phase 3: Local LLM runner (Apple Silicon MPS / CUDA)
-├── generate_summaries.py               # Phase 3: Gemini API alternative with exponential backoff
-├── run_verification.py                 # Phase 4: NLI Verification Pipeline (Support & Contradiction)
-├── run_revision_pipeline.py            # Phase 5: Condition C Targeted Revision Loop
-├── evaluate_study.py                   # Phase 6: Master Evaluation Suite (ROUGE, Compression, Slices)
+├── run_exp2_full.sh                    # End-to-end executable pipeline runner
+├── generate_summaries_local.py         # Summary generation (Conditions A & B)
+├── run_verification.py                 # Claim extraction & multilingual NLI verification
+├── run_revision_pipeline.py            # Condition C targeted revision pipeline
+├── evaluate_study.py                   # Master evaluation suite (ROUGE, NLI, Compression)
 │
-├── src/                                # Core Modular Engine
+├── src/                                # Core Algorithmic Engine
 │   ├── __init__.py
 │   ├── acceptance_policy.py            # 3-rule policy & zero-claim handler
 │   ├── claim_extractor.py              # Atomic factual claim splitter
-│   ├── claim_graph.py                  # NetworkX dependency graph (Approach C)
+│   ├── claim_graph.py                  # Entity dependency graph
 │   ├── evidence_retriever.py           # Multilingual sentence embedding & cosine top-k
 │   ├── metrics.py                      # Pure-Python ROUGE-1/2/L & compression engine
 │   ├── nli_verifier.py                 # mDeBERTa-v3 multilingual NLI classifier
-│   └── revision.py                     # Targeted revision prompt & editor
+│   └── revision.py                     # In-place evidence-based claim reviser
 │
-└── data/                               # Experimental Artifacts & Outputs
-    ├── candidates_master.csv           # 500 normalized candidate records
-    ├── summaries_baseline_A_B.csv      # Baseline Condition A & B outputs
-    ├── claims_verification_detailed.csv# Claim-by-claim NLI audits
-    ├── verification_summary_report.csv # Baseline verification scorecard
-    ├── condition_c_final_summaries.csv # Final Condition A vs. B vs. C comparison
-    ├── revision_audit_trail.csv        # Step-by-step revision history (S0 -> S1 -> S2)
-    ├── evaluation_master_metrics.csv   # Comprehensive metric matrix
-    ├── evaluation_summary_by_condition.csv # Master scorecard
-    ├── evaluation_language_breakdown.csv   # Language-sliced breakdown
-    └── EVALUATION_REPORT.md            # Markdown research report
+├── data/                               # Experimental Data & Artifacts
+│   ├── candidates_master.csv           # 500 normalized balanced candidate records
+│   ├── experiments/
+│   │   └── exp2_refined_factuality/    # Finalized 500-sample outputs & evaluation reports
+│   ├── gupshup/                        # Raw GupShup dialogue dataset
+│   ├── ilsum/                          # Raw ILSUM 2.0 Hindi/English dataset
+│   └── mutant/                         # Raw mutant benchmark dataset
+│
+└── docs/                               # Academic Publications & Presentations
+    ├── PRESENTATION_SLIDES.md          # Defense & presentation slides
+    └── RESEARCH_PAPER_IEEE.md          # IEEE formatted research paper draft
 ```
 
 ---
 
 ## Installation & Setup
-
-### Prerequisites
-- Python 3.11 (`python3.11`)
-- macOS with Apple Silicon (M1/M2/M3/M4) recommended for fast local MPS acceleration, or Linux/Windows with CUDA.
-
-### Setup Instructions
 
 ```bash
 # 1. Clone the repository
@@ -130,129 +118,70 @@ cd factIndic
 python3.11 -m venv .venv
 source .venv/bin/activate
 
-# 3. Upgrade pip and install all dependencies
-pip install --upgrade pip
+# 3. Install dependencies
 pip install -r requirements.txt
 ```
 
 ---
 
-## Step-by-Step Execution Guide
+## Execution Guide
 
-### Step 1: Dataset Preparation & Harmonization (Phase 1 & 2)
-
+### Run Full 500-Sample Pipeline (Native GPU Acceleration)
 ```bash
-# Filter and inspect ILSUM datasets
-python dataset_inspection.py
-
-# Deterministically sample candidate pairs (random_state=42)
-python select_ilsum_samples.py
-python select_gupshup_samples.py
-
-# Unify schemas into data/candidates_master.csv (500 samples)
-python create_unified_candidates.py
+./run_exp2_full.sh
 ```
 
-### Step 2: Generate Baseline Summaries (Phase 3)
-
-Run Condition A (Standard) and Condition B (Factuality-Aware) locally on your Mac's GPU:
-
+### Or Run Individual Stages
 ```bash
-# Process a balanced pilot slice (5 Hindi, 5 English, 5 Hinglish = 15 samples)
-python generate_summaries_local.py --balanced 5
+# 1. Summary Generation (Conditions A and B)
+python3 generate_summaries_local.py --input data/candidates_master.csv --output data/experiments/exp2_refined_factuality/summaries_A_B.csv --seed 42
 
-# Or run on the full candidate dataset:
-python generate_summaries_local.py --limit 0
+# 2. Claim Verification
+python3 run_verification.py --input data/experiments/exp2_refined_factuality/summaries_A_B.csv --output_detailed data/experiments/exp2_refined_factuality/claims_detailed.csv --output_summary data/experiments/exp2_refined_factuality/verification_summary.csv
+
+# 3. Condition C Targeted Revision
+python3 run_revision_pipeline.py --input data/experiments/exp2_refined_factuality/summaries_A_B.csv --output_final data/experiments/exp2_refined_factuality/condition_c.csv --output_audit data/experiments/exp2_refined_factuality/revision_audit.csv --max_revisions 1
+
+# 4. Master Evaluation Suite
+python3 evaluate_study.py --data_dir data/experiments/exp2_refined_factuality/ --output_dir data/experiments/exp2_refined_factuality/
 ```
-*Outputs are saved incrementally to `data/summaries_baseline_A_B.csv`.*
-
-### Step 3: Run Verification Pipeline (Phase 4)
-
-Audits each summary by extracting atomic claims, retrieving evidence sentences, and running multilingual NLI:
-
-```bash
-# Verify baseline summaries
-python run_verification.py
-```
-*Outputs:*
-- `data/claims_verification_detailed.csv` (Detailed audit trail per claim)
-- `data/verification_summary_report.csv` (Scorecard of Support and Contradiction rates)
-
-### Step 4: Run Targeted Revision Loop (Phase 5 - Condition C)
-
-Applies the 3 acceptance rules, builds NetworkX claim graphs, revises problematic claims using retrieved evidence, and re-verifies:
-
-```bash
-# Execute revision loop (maximum 2 attempts)
-python run_revision_pipeline.py --limit 18
-```
-*Outputs:*
-- `data/condition_c_final_summaries.csv` (Condition A vs. B vs. C side-by-side)
-- `data/revision_audit_trail.csv` (Full trace of steps $S_0 \rightarrow S_1 \rightarrow S_2$)
-
-### Step 5: Comprehensive Evaluation Suite (Phase 6)
-
-Computes ROUGE-1/2/L, compression ratios, language slices, and decision distributions:
-
-```bash
-python evaluate_study.py
-```
-*Generates publication-ready reports in `data/EVALUATION_REPORT.md` and CSV summary tables.*
 
 ---
 
-## Key Experimental Results
+## Full Experimental Results (500 Documents)
 
-Evaluated on an 18-document balanced testbed (8 Hindi news, 5 English news, 5 Hinglish dialogues):
-
-### 1. Overall Performance Across Conditions (Core Metrics)
-
-#### A. Lexical Overlap Metrics (ROUGE with Reference Summaries)
-*Reference Summaries:* ILSUM 2.0 (Hindi/English) & GupShup (Hinglish). Evaluated per document and macro-averaged across samples.
+### 1. Overall Performance Across Conditions
 
 | Metric | Condition A (Standard) | Condition B (Factuality-Aware) | Condition C (Targeted Revision) | Net Delta (C vs. A) |
 | :--- | :---: | :---: | :---: | :---: |
-| **ROUGE-1 Precision** | 0.3107 | 0.2292 | **0.2104** | -0.1003 |
-| **ROUGE-1 Recall** | 0.2844 | 0.2468 | **0.2732** | -0.0112 |
-| **ROUGE-1 $F_1$** | 0.2535 | 0.1951 | **0.2126** | -0.0409 |
-| **ROUGE-2 $F_1$** | 0.0986 | 0.0583 | **0.0687** | -0.0299 |
-| **ROUGE-L $F_1$** | 0.1946 | 0.1477 | **0.1525** | -0.0421 |
-| **Average Summary Words** | 52.4 words | 59.1 words | 56.0 words | +3.6 words |
-| **Compression Ratio (words)** | 27.47% | 27.80% | 27.79% | +0.32% |
-| **Inference Latency** | 21.88s | 40.29s | 49.04s | +27.16s |
+| **Macro Factual Support (%)** | 62.30% | 61.86% | **81.40%** | **+19.10%** |
+| **Macro Contradiction (%)** | 11.66% | 11.00% | **4.83%** | **-6.83%** |
+| **Micro Support Rate (Claims)** | 64.41% (1,296 / 2,012) | 62.12% (1,161 / 1,869) | **82.10% (1,220 / 1,486)** | **+17.69%** |
+| **Micro Contradiction Rate (Claims)** | 11.33% (228 / 2,012) | 11.66% (218 / 1,869) | **4.64% (69 / 1,486)** | **-6.69%** |
+| **Strict Acceptance Rate (%)** | 23.60% (118 / 500) | 24.60% (123 / 500) | **62.60% (313 / 500)** | **+39.00%** |
+| **Average Summary Length** | 57.9 words | 57.6 words | **46.1 words** | -11.8 words |
+| **ROUGE-L Precision** | 0.2552 | 0.2635 | **0.2862** | +0.0310 |
+| **ROUGE-L F1-Score** | 0.3170 | **0.3250** | 0.2999 | -0.0171 |
 
-#### B. Factuality & NLI Verification Metrics (Macro-Average vs. Micro-Average)
-*NLI Model:* `mDeBERTa-v3-base-xnli` with evidence retrieval via `paraphrase-multilingual-MiniLM-L12-v2`.
+### 2. Language Breakdown (Section 14)
 
-| Metric / Evaluation Mode | Condition A (Standard) | Condition B (Factuality-Aware) | Condition C (Targeted Revision) | Net Delta (C vs. A) |
-| :--- | :---: | :---: | :---: | :---: |
-| **Macro Factual Support (%)** | 52.50% | 66.11% | **67.99%** | **+15.49%** |
-| **Macro Contradiction (%)** | 14.58% | 12.50% | **9.10%** | **-5.48%** |
-| **Micro Support Rate (Claims)** | 30/60 (50.00%) | 39/67 (58.21%) | **38/64 (59.38%)** | **+9.38%** |
-| **Micro Contradiction Rate (Claims)** | 8/60 (13.33%) | 8/67 (11.94%) | **6/64 (9.38%)** | **-3.95%** |
-| **Total Evaluated Claims ($N$)** | $N = 60$ | $N = 67$ | $N = 64$ | - |
+| Language | Partition Size | Cond A Support | Cond B Support | Cond C Support | Cond A Contra | Cond B Contra | Cond C Contra | Strict Acceptance (C) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Hindi** (`ILSUM_HI`) | 150 | 61.77% | 65.83% | **92.98%** | 18.23% | 15.64% | **3.24%** | **90.67%** (136/150) |
+| **Hinglish** (`GupShup` H2E) | 200 | 54.93% | 56.91% | **77.17%** | 9.32% | 9.56% | **5.20%** | **53.00%** (106/200) |
+| **English** (`ILSUM_EN`) | 150 | 72.66% | 64.48% | **75.45%** | 8.22% | 8.28% | **5.92%** | **47.33%** (71/150) |
 
-*Note on 127 Baseline Claims:* Pooled baseline claims across Condition A ($N=60$) and Condition B ($N=67$): 69 Entailments ($54.33\%$), 42 Neutrals ($33.07\%$), 16 Contradictions ($12.60\%$).
-
-### 2. Language Breakdown
-
-| Language | Samples | Cond A Support | Cond B Support | Cond C Support | Cond A Contra | Cond B Contra | Cond C Contra |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **English News** | 5 | 74.3% | 72.3% | **72.3%** | 5.0% | 3.3% | **3.3%** |
-| **Hindi News** | 8 | 58.3% | 53.5% | **57.8%** | 10.9% | 26.0% | **18.4%** |
-| **Hinglish Dialogue** | 5 | 21.3% | 80.0% | **80.0%** | 30.0% | 0.0% | **0.0%** |
-
-### 3. Acceptance Policy Decisions
-- **Total Evaluated Documents:** 18
-- **Accepted Automatically at $S_0$:** 7 (38.9%)
-- **Accepted After Targeted Revision ($S_1$):** 1 (5.6%)
-- **Total Accepted Summaries:** **8 (44.4%)**
-- **Automated Policy Terminated (`UNRESOLVED_FLAGGED`):** **10 (55.6%)**
+### 3. Policy Acceptance Decisions
+- **Total Audited Documents:** 500
+- **Accepted Automatically at $S_0$ (Direct from B):** 123 (24.6%)
+- **Accepted After Targeted Revision ($S_1$):** 190 (38.0%)
+- **Total Accepted Summaries:** **313 (62.6%)**
+- **Flagged for Human Review (`UNRESOLVED_FLAGGED`):** 187 (37.4%)
 
 ---
 
-## Research Citations & Models
-- **Base Summarization Model:** `Qwen/Qwen2.5-1.5B-Instruct`
+## Models & Tools
+- **Generative Summarizer:** `Qwen/Qwen2.5-1.5B-Instruct`
 - **Evidence Retriever:** `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
 - **Multilingual NLI Classifier:** `MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7`
-- **Datasets:** ILSUM 2.0 (Hindi & English), GupShup (Hinglish-to-English Dialogue)
+- **Datasets:** ILSUM 2.0 (Hindi/English News), GupShup (Hinglish-to-English Dialogue)
